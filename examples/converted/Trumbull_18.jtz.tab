@@ -1,0 +1,395 @@
+% Converted to .tab by luteconv 1.0.0
+% encoding-date 2020-10-16
+-C
+-highlightparen
+-tuning g4c3f3a2d2g2
+$flagstyle=thin
+$charstyle=robinson
+{A galliard/}
+{Trumbull lute book: folio 9v}
+
+% Stave 1
+% Bar 1
+b
+1acd a
+2acd a
+2acd a
+2acd a
+2acd a
+% Bar 2
+b
+1acd a
+2acd a
+2acd a
+1cdda
+% Bar 3
+b
+1aa c
+2cf ec
+3 e
+3 c
+2 f
+2 e
+% Bar 4
+b
+1aac  a
+0aac  a
+% Bar 5
+b
+1eff  a
+2eff
+2eff
+2eff
+2eff
+% Bar 6
+b
+1.eccde
+2e
+1fc d c
+% Bar 7
+b
+1eccde
+2.fc e c
+3f
+2e
+2c
+% Bar 8
+b
+
+% Stave 2
+% Bar 8
+b
+1eccde
+0eccde
+% Bar 9
+b
+2acd a
+3  a
+3  c
+3  d
+3  c
+3  d
+3 a
+3 c
+3 a
+3 c
+3 d
+% Bar 10
+b
+3a    a
+3 a
+3 d
+3 c
+3 a
+3 c
+3 d
+3a
+2c  a
+3d
+3c
+% Bar 11
+b
+3a  c
+3c
+3d
+3a
+3c   c
+3 f
+3 e
+3 c
+3 e
+3 f
+3 c
+3 e
+% Bar 12
+b
+
+% Stave 3
+% Bar 12
+b
+2a
+3 d
+3 c
+3 a
+3  d
+3  c
+3  a
+1aac  a
+% Bar 13
+b
+2e
+3e
+3f
+2h
+3 f
+3 e
+3 f
+3 e
+3 f
+3 h
+% Bar 14
+b
+3e   e
+3 h
+3 f
+3 e
+3 f
+3 h
+3e
+3 f
+2f   e
+3h
+3f
+% Bar 15
+b
+
+% Stave 4
+% Bar 15
+b
+2e   e
+3f
+3e
+2f  e
+3h
+3f
+3h
+3f
+3e
+3 h
+% Bar 16
+b
+2 gh e
+3  h
+3  g
+3  h
+3 e
+3 g
+3 h
+1 gh e
+% Bar 17
+b
+1fhi f
+2fhi f
+2fhi f
+2fhi f
+2fhi f
+% Bar 18
+b
+1fhi f
+2fhi f
+2fhi f
+1hff
+% Bar 19
+b
+
+% Stave 5
+% Bar 19
+b
+1ffih f
+1eff  a
+2.ccee c
+3 f
+% Bar 20
+b
+0 efec
+1 efec
+% Bar 21
+b
+1 dba d
+2 dba d
+2 daa d
+2 dba d
+2 dda
+% Bar 22
+b
+1. dba d
+2d
+2c  a
+2a
+% Bar 23
+b
+1aa c
+2 f ec
+3 e
+3 c
+2 f
+2 e
+% Bar 24
+b
+0aac  a
+1aac
+% Bar 25
+b
+2fhi f
+3f
+3f
+2f
+2f
+2fhi f
+2f
+% Bar 26
+b
+
+% Stave 6
+% Bar 26
+b
+2fhi f
+3 h
+3 i
+3f
+3 h
+3 i
+3f
+2h  f
+2f
+% Bar 27
+b
+1f  h
+2e
+3f
+3e
+3g
+3 h
+3f
+3g
+% Bar 28
+b
+2hhk  h
+3 l
+3 k
+3 h
+3  l
+3  k
+3  h
+1hhk
+% Bar 29
+b
+2h ff
+3h
+3h
+2h
+2h
+2h ff
+2h
+% Bar 30
+b
+
+% Stave 7
+% Bar 30
+b
+2h f
+3 i
+3f
+3h
+3 i
+3f
+3h
+1fh  f
+% Bar 31
+b
+3d  c
+3a
+3c
+3d
+3c
+3 f
+3 e
+3 c
+3 e
+3 f
+3c
+3 e
+% Bar 32
+b
+2a    a
+3 d
+3 c
+3 a
+3  d
+3  c
+3  a
+1aac  a
+% Bar 33
+b
+
+% Stave 8
+% Bar 33
+b
+2.acd a
+3c
+2a
+2 c  a
+2  d
+2a
+% Bar 34
+b
+2.c  a
+3e
+2f
+2a   a
+2f
+2f
+% Bar 35
+b
+2.h    h
+3k
+2l
+2.k   h
+3h
+2 l
+% Bar 36
+b
+2.ea   a
+3c
+3a
+3 d
+1acd a
+2acd a
+% Bar 37
+b
+3    a
+3 a
+3 c
+3 d
+2a
+2 c
+2  d
+2 a
+% Bar 38
+b
+
+% Stave 9
+% Bar 38
+b
+3   a
+3a
+3c
+3e
+2f
+2acd a
+2e
+2f
+% Bar 39
+b
+3h   h
+3 l
+3h
+3k
+3l
+3i
+2.k
+2h
+2 l
+% Bar 40
+b
+3e    a
+3f
+3h
+3e
+3f
+3h
+1e
+0ffhha
+% Bar 41
+b
+e

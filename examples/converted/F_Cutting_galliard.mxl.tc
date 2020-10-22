@@ -1,0 +1,456 @@
+{ Converted to .tab by luteconv 1.0.0 }
+{ encoding-date 2020-10-21 }
+{ Galliard }
+{ Galliard }
+
+{ Stave 1 }
+{ Bar 1 }
+|
+E.a1a2c4
+Sc1
+Ed1
+Ec4
+Ed1a2b4
+Ec1
+{ Bar 2 }
+|
+E.a1c4
+Sa3
+Eb3
+Ec4
+Ed3e4
+Ee2
+{ Bar 3 }
+|
+Ed1a2c4
+Ec2
+Ec1d2a4
+Ea2
+Ea1a2e5
+Ee3
+{ Bar 4 }
+|
+E.d2f3c5
+Se5
+Ea4
+Ec5
+Ea1b3d5
+Ed3
+{ Bar 5 }
+|
+E.a2b3c5
+Sc2
+Ed2
+Ec5
+Eb2a5
+Ea3
+{ Bar 6 }
+|
+{^}
+{ Stave 2 }
+{ Bar 6 }
+|
+E.a2b3d6
+Sa5
+Ec5
+Ed6
+Ea1b2a5
+Ec1
+{ Bar 7 }
+|
+E.d1a2a6
+Sc6
+Ea1a2d6
+Ea5
+Ea1a2c5
+Ee2
+{ Bar 8 }
+|
+Ea6
+Ea1a2c3
+Ec4
+Ed3
+Qa1a2c3a6
+{ Bar 9 }
+:|:
+Sa1c4
+Sd2
+Sa1
+Sc1
+Ed1
+Ea1
+Ed1a2b4
+Ec1
+{ Bar 10 }
+|
+Sa1c4
+Sb4
+Sc4
+Sa3
+Eb3
+Ec4
+Ed3e4
+Ee2
+{ Bar 11 }
+|
+{^}
+{ Stave 3 }
+{ Bar 11 }
+|
+Ed1a2c4
+Sa2
+Sc2
+Ec1d2a4
+Ea2
+Ea1a2e5
+Ee3
+{ Bar 12 }
+|
+E.d2f3c5
+Se5
+Ea4
+Ec5
+Ea1b3d5
+Ed3
+{ Bar 13 }
+|
+Sa2c5
+Sd3
+Sa2
+Sc2
+Ed2
+Ec5
+Eb2a5
+Ea3
+{ Bar 14 }
+|
+Sa2b3d6
+Sa3
+Sb3
+Sa5
+Ec5
+Ed6
+Ea1b2a5
+Ec1
+{ Bar 15 }
+|
+{^}
+{ Stave 4 }
+{ Bar 15 }
+|
+Ed1a2a6
+Sa6
+Sc6
+Ea1a2d6
+Ea5
+Ea1a2c5
+Ee2
+{ Bar 16 }
+|
+Ea6
+Ea1a2c3
+Sc4
+Sd3
+Sc3
+Sa3
+Qa1a2c3a6
+{ Bar 17 }
+:|:
+Qd2a3c5
+Ed2a3
+Ec2a5
+Ea2d6
+Ed3c6
+{ Bar 18 }
+|
+Eb3a6
+Ec4
+Ea2b3
+Ea4
+Ea1e5
+Ed2c5
+{ Bar 19 }
+|
+Ec2a5
+Ed3
+Ea1c2
+Eb3
+Ef1a3
+Ed1c4
+{ Bar 20 }
+|
+{^}
+{ Stave 5 }
+{ Bar 20 }
+|
+Ec1a4
+Ed2
+Ec1
+Ea1c2
+Ed2f3
+Ec2d3
+{ Bar 21 }
+|
+Ed2b3
+Ea2
+Ed2
+Ed3e4
+Ea2b3c4
+Ec2
+{ Bar 22 }
+|
+Ed2a3a4
+Ec1
+Ea2b3
+Ea1
+Ed3e4
+Ee2
+{ Bar 23 }
+|
+Ea1a2c4
+Ed1
+Eb4
+Ec1
+Ea1a2b3c4
+Ea6
+{ Bar 24 }
+|
+Ec5
+Ec1a2a3
+Eb4
+Ec5
+Qc1a2a3b4c5
+{ Bar 25 }
+:|
+{^}
+{ Stave 6 }
+{ Bar 25 }
+|:
+Ed2a3c5
+Sa2
+Sc2
+Ed2
+Ec2a5
+Ea2d6
+Ed3c6
+{ Bar 26 }
+|
+Sb3a6
+Sa3
+Sb3
+Sd3
+Ea2b3
+Ea4
+Ea1e5
+Ed2c5
+{ Bar 27 }
+|
+Sc2a5
+Sa2
+Sc2
+Sd2
+Ea1c2
+Eb3
+Ef1a3
+Ed1c4
+{ Bar 28 }
+|
+Sc1a4
+Sa1
+Sc1
+Sd1
+Ec1
+Ea1c2
+Ed2f3
+Ec2d3
+{ Bar 29 }
+|
+{^}
+{ Stave 7 }
+{ Bar 29 }
+|
+Ed2b3
+Sa2
+Sd2
+Ed2
+Ed3e4
+Ea2b3c4
+Ec2
+{ Bar 30 }
+|
+Ed2a3a4
+Ec1
+Ea2b3
+Ea1
+Sa3
+Sa1
+Ee2
+{ Bar 31 }
+|
+Ea1a2c4
+Ed1
+Eb4
+Ec1a2
+Ea1a2b3a6
+Ec4
+{ Bar 32 }
+|
+Ee2a3c5
+Sa2
+Sc2
+Se2
+Sa1
+Sc1
+Sd1
+Qc1
+{ Bar 33 }
+:|
+{^}
+{ Stave 8 }
+{ Bar 33 }
+|:
+Qa1d3d5
+Ed2c5
+Eb3
+Eb2a5
+Ea3
+{ Bar 34 }
+|
+Ea2d6
+Ec4
+Ed3c6
+Eb4
+Ea6
+Ed1a2c4
+{ Bar 35 }
+|
+Ec1a4
+Ea2
+Ea1d5
+Ed3
+Ed2c5
+Eb3
+{ Bar 36 }
+|
+Ed3f4f5
+Ea3(Fl1:4)
+Eb3(Fl2:4)
+Eh1(Fl4:4)
+Ef1(Fl3:4)a3(Fl1:4)
+Ee2(Fl2:4)
+{ Bar 37 }
+|
+Ed1c4
+Ec2
+Ec1a4
+Ea2
+Ea1e5
+Ee3
+{ Bar 38 }
+|
+{^}
+{ Stave 9 }
+{ Bar 38 }
+|
+Ee2a3c5
+Ea5
+Ed6
+Ed2
+Eb2d3a5
+Ea2b3
+{ Bar 39 }
+|
+Ea3d5
+Ec4
+Ea2b4c5
+Ec4
+Ed3
+Eb4
+{ Bar 40 }
+|
+Ea6
+Ea2c3
+Ec4
+Ed3
+Qa1a2c3a6
+{ Bar 41 }
+:|:
+Ea1d3d5
+Sb3
+Sd3
+Ed2c5
+Eb3
+Eb2a5
+Ea3
+{ Bar 42 }
+|
+Ea2d6
+Sc4
+Sa2
+Ed3c6
+Eb4
+Ea6
+Ed1a2c4
+{ Bar 43 }
+|
+{^}
+{ Stave 10 }
+{ Bar 43 }
+|
+Ec1a4
+Sa2
+Sc1
+Ea1d5
+Ed3
+Ed2c5
+Eb3
+{ Bar 44 }
+|
+Ed3f4f5
+Sa3
+Sb3
+Eb3
+Eh1
+Ef1a3
+Ee2
+{ Bar 45 }
+|
+Ed1c4
+Ec2
+Ec1a4
+Ea2
+Ea1e5
+Ee3
+{ Bar 46 }
+|
+Ee2a3c5
+Ea5
+Ed6
+Ed2
+Eb2d3a5
+Ea2b3
+{ Bar 47 }
+|
+{^}
+{ Stave 11 }
+{ Bar 47 }
+|
+Ea3d5
+Ec4
+Ea2b4c5
+Ec4
+Sc5
+Sa3
+Sb4
+Sd3
+{ Bar 48 }
+|
+Ea6
+Ea2c3
+Sc4
+Sd3
+Sc3
+Sa3
+Qa2c3c4a6
+{ Bar 49 }
+:|

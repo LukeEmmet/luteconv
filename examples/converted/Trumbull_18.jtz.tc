@@ -1,0 +1,389 @@
+{ Converted to .tab by luteconv 1.0.0 }
+{ encoding-date 2020-10-21 }
+{ A galliard }
+{ Trumbull lute book: folio 9v }
+
+{ Stave 1 }
+{ Bar 1 }
+|
+Qa1c2d3a5
+Ea1c2d3a5
+Ea1c2d3a5
+Ea1c2d3a5
+Ea1c2d3a5
+{ Bar 2 }
+|
+Qa1c2d3a5
+Ea1c2d3a5
+Ea1c2d3a5
+Qc1d2d3a4
+{ Bar 3 }
+|
+Qa1a2c4
+Ec1f2e4c5
+Se2
+Sc2
+Ef2
+Ee2
+{ Bar 4 }
+|
+Qa1a2c3a6
+Ha1a2c3a6
+{ Bar 5 }
+|
+Qe1f2f3a6
+Ee1f2f3
+Ee1f2f3
+Ee1f2f3
+Ee1f2f3
+{ Bar 6 }
+|
+Q.e1c2c3d4e5
+Ee1
+Qf1c2d4c6
+{ Bar 7 }
+|
+Qe1c2c3d4e5
+E.f1c2e4c6
+Sf1
+Ee1
+Ec1
+{ Bar 8 }
+|
+{^}
+{ Stave 2 }
+{ Bar 8 }
+|
+Qe1c2c3d4e5
+He1c2c3d4e5
+{ Bar 9 }
+|
+Ea1c2d3a5
+Sa3
+Sc3
+Sd3
+Sc3
+Sd3
+Sa2
+Sc2
+Sa2
+Sc2
+Sd2
+{ Bar 10 }
+|
+Sa1a6
+Sa2
+Sd2
+Sc2
+Sa2
+Sc2
+Sd2
+Sa1
+Ec1a4
+Sd1
+Sc1
+{ Bar 11 }
+|
+Sa1c4
+Sc1
+Sd1
+Sa1
+Sc1c5
+Sf2
+Se2
+Sc2
+Se2
+Sf2
+Sc2
+Se2
+{ Bar 12 }
+|
+{^}
+{ Stave 3 }
+{ Bar 12 }
+|
+Ea1
+Sd2
+Sc2
+Sa2
+Sd3
+Sc3
+Sa3
+Qa1a2c3a6
+{ Bar 13 }
+|
+Ee1
+Se1
+Sf1
+Eh1
+Sf2
+Se2
+Sf2
+Se2
+Sf2
+Sh2
+{ Bar 14 }
+|
+Se1e5
+Sh2
+Sf2
+Se2
+Sf2
+Sh2
+Se1
+Sf2
+Ef1e5
+Sh1
+Sf1
+{ Bar 15 }
+|
+{^}
+{ Stave 4 }
+{ Bar 15 }
+|
+Ee1e5
+Sf1
+Se1
+Ef1e4
+Sh1
+Sf1
+Sh1
+Sf1
+Se1
+Sh2
+{ Bar 16 }
+|
+Eg2h3e5
+Sh3
+Sg3
+Sh3
+Se2
+Sg2
+Sh2
+Qg2h3e5
+{ Bar 17 }
+|
+Qf1h2i3f5
+Ef1h2i3f5
+Ef1h2i3f5
+Ef1h2i3f5
+Ef1h2i3f5
+{ Bar 18 }
+|
+Qf1h2i3f5
+Ef1h2i3f5
+Ef1h2i3f5
+Qh1f2f3
+{ Bar 19 }
+|
+{^}
+{ Stave 5 }
+{ Bar 19 }
+|
+Qf1f2i3h4f6
+Qe1f2f3a6
+E.c1c2e3e4c6
+Sf2
+{ Bar 20 }
+|
+He2f3e4c5
+Qe2f3e4c5
+{ Bar 21 }
+|
+Qd2b3a4d6
+Ed2b3a4d6
+Ed2a3a4d6
+Ed2b3a4d6
+Ed2d3a4
+{ Bar 22 }
+|
+Q.d2b3a4d6
+Ed1
+Ec1a4
+Ea1
+{ Bar 23 }
+|
+Qa1a2c4
+Ef2e4c5
+Se2
+Sc2
+Ef2
+Ee2
+{ Bar 24 }
+|
+Ha1a2c3a6
+Qa1a2c3
+{ Bar 25 }
+|
+Ef1h2i3f5
+Sf1
+Sf1
+Ef1
+Ef1
+Ef1h2i3f5
+Ef1
+{ Bar 26 }
+|
+{^}
+{ Stave 6 }
+{ Bar 26 }
+|
+Ef1h2i3f5
+Sh2
+Si2
+Sf1
+Sh2
+Si2
+Sf1
+Eh1f4
+Ef1
+{ Bar 27 }
+|
+Qf1h4
+Ee1
+Sf1
+Se1
+Sg1
+Sh2
+Sf1
+Sg1
+{ Bar 28 }
+|
+Eh1h2k3h6
+Sl2
+Sk2
+Sh2
+Sl3
+Sk3
+Sh3
+Qh1h2k3
+{ Bar 29 }
+|
+Eh1f3f4
+Sh1
+Sh1
+Eh1
+Eh1
+Eh1f3f4
+Eh1
+{ Bar 30 }
+|
+{^}
+{ Stave 7 }
+{ Bar 30 }
+|
+Eh1f3
+Si2
+Sf1
+Sh1
+Si2
+Sf1
+Sh1
+Qf1h2f5
+{ Bar 31 }
+|
+Sd1c4
+Sa1
+Sc1
+Sd1
+Sc1
+Sf2
+Se2
+Sc2
+Se2
+Sf2
+Sc1
+Se2
+{ Bar 32 }
+|
+Ea1a6
+Sd2
+Sc2
+Sa2
+Sd3
+Sc3
+Sa3
+Qa1a2c3a6
+{ Bar 33 }
+|
+{^}
+{ Stave 8 }
+{ Bar 33 }
+|
+E.a1c2d3a5
+Sc1
+Ea1
+Ec2a5
+Ed3
+Ea1
+{ Bar 34 }
+|
+E.c1a4
+Se1
+Ef1
+Ea1a5
+Ef1
+Ef1
+{ Bar 35 }
+|
+E.h1h6
+Sk1
+El1
+E.k1h5
+Sh1
+El2
+{ Bar 36 }
+|
+E.e1a2a6
+Sc1
+Sa1
+Sd2
+Qa1c2d3a5
+Ea1c2d3a5
+{ Bar 37 }
+|
+Sa5
+Sa2
+Sc2
+Sd2
+Ea1
+Ec2
+Ed3
+Ea2
+{ Bar 38 }
+|
+{^}
+{ Stave 9 }
+{ Bar 38 }
+|
+Sa4
+Sa1
+Sc1
+Se1
+Ef1
+Ea1c2d3a5
+Ee1
+Ef1
+{ Bar 39 }
+|
+Sh1h5
+Sl2
+Sh1
+Sk1
+Sl1
+Si1
+E.k1
+Eh1
+El2
+{ Bar 40 }
+|
+Se1a6
+Sf1
+Sh1
+Se1
+Sf1
+Sh1
+Qe1
+Hf1f2h3h4a5
+{ Bar 41 }
+|

@@ -1,0 +1,292 @@
+{ Converted to .tab by luteconv 1.0.0 }
+{ encoding-date 2020-10-21 }
+{ Gagliarda }
+{ Giovanni Girolamo Kapsberger }
+{ Libro Primo d'Involatura di Lauto }
+{ Rome 1611 }
+
+{ Stave 1 }
+{ Bar 1 }
+|
+M(3)
+Hf1d2a3Xa
+Hd1a2a6
+Hc2
+{ Bar 2 }
+|
+H.c1a3a4c6
+Qa1
+Hd2
+{ Bar 3 }
+|
+Ha1a2d6
+Ha1d2a5
+Hc2
+{ Bar 4 }
+|
+H.d2a4Xa
+Ec2
+Ea2
+Hd3
+{ Bar 5 }
+|
+Hd2a4
+Ha1e5
+Hc1a4
+{ Bar 6 }
+|
+H.d1a2b3d6
+Ec1
+Ea1
+Hd2
+{ Bar 7 }
+|
+Hc1a4
+Ha1a5
+Hc2
+{ Bar 8 }
+|
+H.d2a3a4c5
+Ec2
+Ea2
+Hd3c6
+{ Bar 9 }
+|
+{^}
+{ Stave 2 }
+{ Bar 9 }
+|
+H.a2d6
+Ed3
+Eb3
+Ha3Xa
+{ Bar 10 }
+|
+Hc4a5
+Hc6
+Ha3
+{ Bar 11 }
+|
+Hb3a6
+Hc4
+Hd3c6
+{ Bar 12 }
+|
+H.a2d6
+Qc2
+Hd2
+{ Bar 13 }
+|
+Ha1
+Hc1c6
+Hd1a6
+{ Bar 14 }
+|
+H.f1d2a3Xa
+Qd1
+Hc1
+{ Bar 15 }
+|
+Hd3
+Ha2a4
+Hc2e5
+{ Bar 16 }
+|
+H.d2c5
+Qa1
+Hc1
+{ Bar 17 }
+|
+Ha2
+Hc2c4
+Hd2a4
+{ Bar 18 }
+|
+{^}
+{ Stave 3 }
+{ Bar 18 }
+|
+H.c2a5
+Qd2
+Ha1
+{ Bar 19 }
+|
+Ha4
+Hc4a6
+Ha3Xa
+{ Bar 20 }
+|
+H.b3a6
+Qd3c6
+Ha2d6
+{ Bar 21 }
+|
+Hc2a5
+Hd2c5
+Ha1d3e5
+{ Bar 22 }
+|
+H.c1d3a4
+Qd1
+Hf1
+{ Bar 23 }
+|
+Hd2d3c6
+Ha1d2d3a5
+Hc2
+{ Bar 24 }
+|
+H.d2a3a4Xa
+Qa1
+Hd2
+{ Bar 25 }
+:||:
+Hd3a4
+Hd3e5
+Ha2c3c5
+{ Bar 26 }
+|
+H.c2d3a5
+Qd2
+Qa1
+Qd6
+{ Bar 27 }
+|
+{^}
+{ Stave 4 }
+{ Bar 27 }
+|
+Q.c1c6
+Ed1
+Qf1
+Qd2
+Qd1a6
+Qc2
+{ Bar 28 }
+|
+H.c1d2Xa
+Qa1
+Hd2
+{ Bar 29 }
+|
+Q.a1d5
+Ec1
+Qd1
+Qc5
+Qc1a5
+Qb2
+{ Bar 30 }
+|
+Q.d1a2d6
+Ec2
+Qd2
+Qa1
+Qc2a5
+Qb3
+{ Bar 31 }
+|
+Q.d2a3c5
+Ea1
+Qc1
+Qd2
+Qa1d6
+Qd2
+{ Bar 32 }
+|
+{^}
+{ Stave 5 }
+{ Bar 32 }
+|
+Q.c2a5
+Ed2
+Qa1
+Qd3
+Qd2c6
+Qc2
+{ Bar 33 }
+|
+Q.a2d6
+Ec2
+Hd2c6
+Ha1c2b3a6
+{ Bar 34 }
+|
+H.c1d2Xa
+Qa1
+Hd2
+{ Bar 35 }
+|
+Hc2
+Ha2d3a6
+Hc3
+{ Bar 36 }
+|
+H.a1c2d3a5
+Qd2
+Ha1
+{ Bar 37 }
+|
+Hd3c6
+Hd2c5
+Hc2
+{ Bar 38 }
+|
+H.a2a4d6
+Qc2
+Ha2
+{ Bar 39 }
+|
+Hd3c6
+Ha2b3a6
+Hc2
+{ Bar 40 }
+|
+{^}
+{ Stave 6 }
+{ Bar 40 }
+|
+H.d2a3a4c5
+Qa1
+Hd2
+{ Bar 41 }
+|
+H.c2d3c6
+Qd2
+Hc2
+{ Bar 42 }
+|
+H.a2b3d6
+Qb2
+Ha2
+{ Bar 43 }
+|
+H.d3a4Xa
+Qa2
+Hd3
+{ Bar 44 }
+|
+H.b3a6
+Qd3
+Hb3
+{ Bar 45 }
+|
+H.a3a4c5
+Qc3
+Hd3c6
+{ Bar 46 }
+|
+H.a2a4d6
+Qc2
+Hd2
+{ Bar 47 }
+|
+Hd3e4
+Ha1d2d3a5
+Hc2
+{ Bar 48 }
+|
+H.d2a3a4Xa
+Qa1
+Hd2
+{ Bar 49 }
+:||

@@ -1,0 +1,551 @@
+% Converted to .tab by luteconv 1.0.0
+% encoding-date 2020-10-20
+-C
+-highlightparen
+-tuning g4c3f3a2d2g2
+$flagstyle=thin
+$charstyle=robinson
+{2674.tc/}
+
+% Stave 1
+% Bar 1
+b
+0   c
+1   c a
+x   c
+% Bar 2
+b
+1 a   a
+2     a
+x  d.
+1  b c
+2  a.
+x    a
+% Bar 3
+b
+2     d
+x   c.
+x   c c
+x     a
+1     c
+x   b
+% Bar 4
+b
+2a  c a
+x  a
+3  b
+x  a
+x  b
+x  d
+1aabc
+xa.
+% Bar 5
+b
+1hf fh
+2    h
+xf.
+1 if h
+2 h  g
+x   h
+% Bar 6
+b
+
+% Stave 2
+% Bar 6
+b
+2  ffh
+x f.
+1a dcd
+xaaa c
+x e.
+% Bar 7
+b
+2aa c a
+3 d
+x b.
+x a
+x  d.
+x  b
+x  a.
+1   c
+x     a
+% Bar 8
+b
+1   c a
+x   c a
+x   ca
+2   c.
+x     d
+% Bar 9
+b
+1  d  c
+2     a
+x  b.
+1  a c
+xaa c a
+% Bar 10
+b
+1   c
+xaa c
+xabd
+2a.
+x  b
+% Bar 11
+b
+
+% Stave 3
+% Bar 11
+b
+1f de
+2 a c
+xd.
+1ca b
+xaa c
+% Bar 12
+b
+1da c
+xca  c
+x   a
+2aa c
+x d
+% Bar 13
+b
+1 cee
+x  ff
+x c e
+x  e
+% Bar 14
+b
+1 df c
+xa bc a
+x     d
+2  dca
+x  b.
+% Bar 15
+b
+1  abc
+x   cd
+x aa c
+x   b
+% Bar 16
+b
+2  bc a
+x   b.
+x   c
+x  a.
+x  bc a
+x  d.
+1 abc
+% Bar 17
+b
+
+% Stave 4
+% Bar 17
+b
+1 aab
+x abc
+x   ce
+x ce
+% Bar 18
+b
+1 df c
+2  f
+x c.
+x df c
+x c.
+x d
+x f.
+% Bar 19
+b
+1cce
+xcdf
+x ab
+xa.
+% Bar 20
+b
+2cca
+xa.
+3c
+xa.
+xc
+xd.
+2fca
+xd.
+xccd
+xa.
+% Bar 21
+b
+2ccd
+xaab
+xa de
+x   c
+1  de
+xce
+% Bar 22
+b
+
+% Stave 5
+% Bar 22
+b
+1 if h
+2 f
+x h.
+x if h
+x f.
+x h
+x i.
+% Bar 23
+b
+1 hf g
+xhi  h
+x f  e
+xg.
+% Bar 24
+b
+1hea  h
+x f.
+xhfa  h
+x e.
+% Bar 25
+b
+2hff h
+xf.
+x i
+x h.
+1 fgh
+x h.
+% Bar 26
+b
+2  ff
+x f.
+1 fgh
+x  de
+xfe
+% Bar 27
+b
+
+% Stave 6
+% Bar 27
+b
+1eff  a
+xh.
+2 fgh
+xf
+1fdde
+% Bar 28
+b
+2     a
+xfff
+xe
+xc.
+xeff  a
+xc.
+xa
+x d.
+% Bar 29
+b
+1 cdca
+xcdda
+2 abc
+xa.
+1acd a
+% Bar 30
+b
+1a a c
+2 e
+x c.
+x da c
+x c.
+x a
+x  d.
+% Bar 31
+b
+2 abc
+3  d
+x a.
+1 b
+2   a
+x aa
+1 abc
+% Bar 32
+b
+
+% Stave 7
+% Bar 32
+b
+2   cd
+x a.
+x  d
+x  b.
+1  dcd
+xa.
+% Bar 33
+b
+2    c
+xcf
+x e
+x c.
+xce  c
+x c.
+x f
+x e.
+% Bar 34
+b
+2aa c
+x   a
+x    e
+x    c
+xa d a
+x     e
+x    a
+x    c
+% Bar 35
+b
+2a   e
+x   a
+1   c
+2  a c
+xa.
+3c
+xa.
+x e
+x c.
+% Bar 36
+b
+
+% Stave 8
+% Bar 36
+b
+2 ea c
+x a.
+x c
+x e.
+1a  c a
+x a.
+% Bar 37
+b
+2     a
+x  d.
+x  b
+x  a.
+xaa c
+x    e
+x   a
+x   c
+% Bar 38
+b
+2a d a
+x d.
+x c
+x a.
+1  de
+2 d
+x   c
+% Bar 39
+b
+2   a
+x c.
+x a
+x    e
+x a  c
+x  d.
+x  b
+x  a.
+% Bar 40
+b
+
+% Stave 9
+% Bar 40
+b
+1   ce
+2  d.
+x    c
+x    a
+x  b.
+x  a
+x     d
+% Bar 41
+b
+2  a  c
+x   c.
+x   a
+x    e.
+1    cd
+2  b.
+x     c
+% Bar 42
+b
+2     a
+x  a.
+x   c
+x     c
+x     d
+x    a
+1   bc
+% Bar 43
+b
+1   c d
+x     f
+x   c.
+2     d
+x     c
+% Bar 44
+b
+
+% Stave 10
+% Bar 44
+b
+1  bc a
+x a
+2   c
+x ab
+x aaa
+x   ce
+% Bar 45
+b
+2 da c
+x c.
+x d
+xa.
+x    c
+x da
+x c a
+x a.
+% Bar 46
+b
+2  def
+x   c
+1  de
+2    f
+x  de
+x b  d
+x    c
+% Bar 47
+b
+2 bd a
+x a.
+1 bd
+2    a
+x bd
+x a
+x  d.
+% Bar 48
+b
+
+% Stave 11
+% Bar 48
+b
+2  bcd
+x  a.
+1  bc
+2    d
+x  bc
+x    c
+x    a
+% Bar 49
+b
+2     d
+x ab
+x  dca
+x  b.
+x  abc
+x   c.
+x  a
+x  b.
+% Bar 50
+b
+2     c
+x  de
+x  bc
+x  aa
+x   cef
+x  a.
+x  b  d
+x     c
+% Bar 51
+b
+2     a
+x  bc
+x  a
+x   c.
+x    c
+x  b.
+x  a
+x   c.
+% Bar 52
+b
+
+% Stave 12
+% Bar 52
+b
+2  a
+x  b.
+1  a a
+2     d
+x   c.
+x   c c
+x     a
+% Bar 53
+b
+2     c
+x     d
+1c  b c
+2     a
+xda c
+xca c
+xa.
+% Bar 54
+b
+2c
+xd
+1ca bc
+2   cd
+xa.
+xa dcd
+x    a
+% Bar 55
+b
+2aaa c
+3 e
+x c.
+2 ea c
+xa.
+x    a
+xabd
+x a
+x  d.
+% Bar 56
+b
+
+% Stave 13
+% Bar 56
+b
+2 a
+x b.
+1aa   e
+xa d d
+2    c
+x    a
+% Bar 57
+b
+2    c
+x    d
+1a c ca
+2    a
+x  d
+1a d d
+% Bar 58
+b
+1a d ca
+x  c
+0abd a
+% Bar 59
+b
+2    a
+xabd
+x a
+x  d.
+Yaacc a
+% Bar 60
+bb
+e

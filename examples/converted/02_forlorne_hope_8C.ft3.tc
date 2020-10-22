@@ -1,0 +1,595 @@
+{ Converted to .tab by luteconv 1.0.0 }
+{ encoding-date 2020-10-21 }
+{ 2. Forlorn hope fancy }
+{ John Dowland }
+
+{ Stave 1 }
+{ Bar 1 }
+|
+M(C/)
+Hc4
+Qb4
+Qa4
+{ Bar 2 }
+|
+Qe5
+Qd5
+Ea2c5
+Ee5
+Ea4
+Ec5
+{ Bar 3 }
+|
+Ee3(Fl4:4)e5(Fl2:4)
+Ee4(Fl3:4)
+Sd3(Fl2:4)
+Sc4
+Se5
+Sb4
+Ec3c4
+Ea6
+Sb3
+Sc6
+Sd6
+Sa5
+{ Bar 4 }
+|
+Sa3c5
+Sa5
+Sc5
+Se5
+Sa2a4
+Se5
+Sa4
+Sc5
+Ea1e5
+Ec5
+Ec4d5
+Ed3e4
+{ Bar 5 }
+|
+{^}
+{ Stave 2 }
+{ Bar 5 }
+|
+Ee2f3f4c5
+Se4e5
+Sc4
+Sd2a4
+Sf3
+Se3c4
+Sc3
+Ec2d3e4
+Ec3
+Eb2d3
+Ea5
+{ Bar 6 }
+|
+Ea2d3c4
+Sc3
+Sa3
+Eb3
+Ec4
+Ea2a3c5
+Sf3
+Sc2
+Ed2
+Sa2d3
+Sb3
+{ Bar 7 }
+|
+Ed2a3b5
+Ec2
+Qc2a3a5
+Sh1e6
+Sa3
+Sd4(Fl3:4)
+Sb4(Fl1:4)
+Qc4d6
+{ Bar 8 }
+|
+{^}
+{ Stave 3 }
+{ Bar 8 }
+|
+Eg1c2e4c6
+Sc4e6
+Sa4
+Ef1e5f6
+Eb4c5
+Ee1f2c4e5
+Ea3b4
+Sd1b3c4
+Sd3
+Sa2a6
+Sc2
+{ Bar 9 }
+|
+Ec1e2c5
+Ef3
+Sd2
+Sa5
+Ec6
+Sc2
+Sd6
+Ed3a5
+Sb2
+Sd6
+Ec3a6
+{ Bar 10 }
+|
+Sa2
+Sc6
+Eb3d6
+Ed3a4
+Sc6
+Sb2
+Sa2d6
+Sb3
+Eb3c5
+Eb3a4a5Xa
+Sa3
+Sd5
+{ Bar 11 }
+|
+{^}
+{ Stave 4 }
+{ Bar 11 }
+|
+Eb3c5a6
+Sc4(Fl3:4)
+Sc6(Fl2:4)
+Ec5(Fl2:4)d6(Fl4:4)
+Sf6(Fl4:4)
+Se5(Fl2:4)
+Ea3b4(Fl1:4)c5(Fl2:4)
+Eb3(Fl1:4)
+Ec5
+Sd3
+Se4
+{ Bar 12 }
+|
+Sa2b3e4c5
+Sc4
+Eb3c4
+Ea3c5
+Eb4
+Qc4(Fl3:4)a6
+Qb3(Fl2:4)
+{ Bar 13 }
+|
+Ec5Xb
+Ea3
+Qa2a3c5Xa
+EXc/
+Ee3(Fl4:4)
+Qa1d3c4(Fl2:4)Xb/
+{ Bar 14 }
+|
+Ef3(Fl4:4)e4(Fl2:4)Xa/
+Ee2(Fl3:4)
+Qh1d2a3
+Ec2e4c6
+Sg1
+Sd6
+Ef1g3h5f6
+Ek5(Fl4:4)
+{ Bar 15 }
+|
+{^}
+{ Stave 5 }
+{ Bar 15 }
+|
+Se1a2c3a6
+Sa3
+Sc3
+Sd3
+Sd1a2
+Sd3
+Sa2
+Sc2
+Sc1d2f3e4c5
+Sa5
+Sc5
+Se5
+Sa3a4
+Sc4e5
+Sa1a3a4
+Sd2c3c4
+{ Bar 16 }
+|
+Sc2e3e4c6
+Sa2
+Sc1c2d3
+Sd2
+Sa1c2f3f4
+Sa2
+Ea2
+Ec1c2f3e4
+Se3
+Sc3
+Ee3c6
+Ea1
+{ Bar 17 }
+|
+{^}
+{ Stave 6 }
+{ Bar 17 }
+|
+Qe2f3e4c5
+Qf3
+Qc1e3
+Qd3
+{ Bar 18 }
+|
+Qb1c3
+Qa1a2b3
+Qc1e3e4
+Ec2d3
+Ea2
+{ Bar 19 }
+|
+Ec3d4
+Ec2
+Qc2c3c4
+Qc1c2a3b4
+Eb2
+Ec3
+{ Bar 20 }
+|
+Qb1(Fl1:4)c2(Fl2:4)d3(Fl3:4)e5(Fl4:4)
+Qa1e3
+Qe2f3e4c5
+Qd2d3e4c6
+{ Bar 21 }
+|
+Qc2d3e4e5c6
+Ec3b6
+Ea2
+Ed3e4e5c6
+Ee4
+Qa3
+{ Bar 22 }
+|
+Ec3e4e5Xc/
+Sd4
+Sg5
+Qc2c4
+Qc2d3e4c6
+Qg3g5e6
+{ Bar 23 }
+|
+{^}
+{ Stave 7 }
+{ Bar 23 }
+|
+Ec2c3d4Xc/
+Ee5
+Ee1
+Ec5
+Ee1h3(Fl4:4)g6(Fl2:4)
+Ee6
+Eh3(Fl3:4)g6
+Ei2(Fl4:4)
+{ Bar 24 }
+|
+Qe1e2h3e6
+Eg3
+Eh2
+Qb1c2e3b5
+Qc1c2e3c6
+{ Bar 25 }
+|
+Eh2g4e5
+Sg2
+Se2
+Eg2(Fl2:4)h3(Fl4:4)
+Eh6(Fl3:4)
+Qc1c2a3b5
+Ee3c6
+Ea1
+{ Bar 26 }
+|
+Ee2f3e4c5
+Ec2
+Ee2
+Ea5
+Ea1a2c4d6
+Ec6
+Ed1a2c4a6
+Eb3
+{ Bar 27 }
+|
+{^}
+{ Stave 8 }
+{ Bar 27 }
+|
+Sc1f2f3e4c5
+Sf2
+Se2
+Sc2
+Ee2c5
+Ec1
+Sa2c4
+Sb4
+Sc4
+Sa3
+Sa2b3
+Sc4
+Sb3
+Sc2d3
+{ Bar 28 }
+|
+Sd2f3
+Se4
+Ta2
+Td3
+Tb3
+Ta3
+Sa1b3
+Sc4
+Td3
+Tb3
+Ta3
+Tc4
+Sc1a2b4
+Sc5
+Td2
+Tb2
+Ta2
+Td3
+Sd1b3
+Sc4
+Tb3
+Ta3
+Tc4
+Ta4
+{ Bar 29 }
+|
+{^}
+{ Stave 9 }
+{ Bar 29 }
+|
+Sf1d5(Fl2:4)
+Sa5
+Ta4
+Td5(Fl2:4)
+Tc5
+Ta5
+Th1d6
+Tf4
+Ta4
+Tc4
+Tc5
+Ta5
+Tc5
+Te5
+Ta4
+Te5
+Ta4
+Tc4
+Sg1a3
+Tc4
+Ta4
+Tf1e5
+Tc5
+Te5
+Tb4
+{ Bar 30 }
+|
+Se1(Fl4:4)c4(Fl1:4)
+Ta4
+Te5
+Td1c5
+Ta5
+Tc5
+Te5
+Tc1a4
+Te5
+Ta4
+Tc4
+Tf1a4
+Tc4
+Te4
+Ta4
+Td1c4
+Tb4
+Tc4
+Ta3
+Ta1b3
+Ta3
+Tb3
+Td3
+Se2f3
+Td3
+Tf4
+Td2a3
+Tc4
+Ta3
+Tc3
+{ Bar 31 }
+|
+{^}
+{ Stave 10 }
+{ Bar 31 }
+|
+Sc2d3
+Tb3
+Ta3
+Tb2c4
+Ta4
+Tc4
+Ta3
+Sa2b3
+Ta3
+Tc4
+Ta4
+Te5
+Ta4
+Tc4
+Td3e4
+Tc4
+Te4
+Tf4
+Tb3e4
+Tc4
+Sc4
+Ta3
+Tc4
+Tb4
+Te5
+Sb4
+Sc1
+{ Bar 32 }
+|
+{^}
+{ Stave 11 }
+{ Bar 32 }
+|
+Ta1c4
+Tb3
+Ta3
+Td3
+Tb3
+Ta2
+Td3
+Tb2
+Tc1a2b4(Fl1:4)
+Ta3
+Tb3(Fl1:4)
+Td3
+Tc1a2a4
+Tc2
+Td2
+Ta2
+Ta1c2e5
+Ta2
+Tc2
+Te2
+Ta1d5!
+Tc4.
+Tb3:
+Td3.
+Te2a3:c5!
+Tc2
+Ta2
+Te3
+Ta2
+Tc2
+Te2
+Ta1
+{ Bar 33 }
+|
+{^}
+{ Stave 12 }
+{ Bar 33 }
+|
+Tc1b5
+Tc2
+Td2
+Ta1
+Th2a5
+Te1
+Tf1
+Th2
+Te1e6
+Th2
+Te1
+Tg1
+Th1d6
+Tf3
+Td2
+Tf2
+Tg1c6
+Tc1
+Tc1
+Tc2
+Te2c5
+Tf2
+Tc1
+Tf1
+Td1c4a6
+Ta3
+Tb3
+Td3
+Ta2
+Tb3
+Tc4
+Ta1
+{ Bar 34 }
+|
+{^}
+{ Stave 13 }
+{ Bar 34 }
+|
+Tc1c5
+Td2
+Tf3
+Tc1
+Tf1a5
+Ta1
+Tb2
+Ta1
+Td1a6
+Ta2
+Tc5
+Td2
+Tc1c5
+Td2
+Ta2a4
+Tc1
+Ta1c4d5
+Tb4
+Tc4
+Ta3
+Tb3
+Tc4
+Tb3c4
+Td3
+Ta2b3c5
+Tc2
+Te2
+Ta1
+Tc1a3
+Ta2
+Tc2d3
+Te2
+{ Bar 35 }
+|
+{^}
+{ Stave 14 }
+{ Bar 35 }
+|
+Ta1c4(Fl1:4)
+Ta3
+Tc3(Fl2:4)c4(Fl1:4)
+Td3(Fl3:4)e4(Fl4:4)
+Ta2c3(Fl2:4)
+Tc3c4(Fl1:4)
+Td3e4
+Ta2c3
+Tb2(Fl1:4)d3(Fl3:4)
+Ta2c3(Fl2:4)
+Tb2d3
+Ta2c3
+Tb2d3
+Ta2c3
+Tb2d3
+Ta2c3
+Tb2d3
+Ta2c3
+Tb2d3
+Ta2c3
+Tb2d3:
+Ta5.
+Td5!
+Ta4.
+Sa6!
+Sa1a2d3c4
+Sc3
+Sa3
+{ Bar 36 }
+|
+Wa1a2c3c4c5a6
+{ Bar 37 }
+|

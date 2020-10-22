@@ -1,0 +1,298 @@
+% Converted to .tab by luteconv 1.0.0
+% encoding-date 2020-10-16
+-C
+-highlightparen
+-tuning f4g4c3f3a2d2g2
+$flagstyle=thin
+$charstyle=robinson
+{Gagliarda}
+{Giovanni Girolamo Kapsberger}
+{Libro Primo d'Involatura di Lauto}
+{Rome 1611}
+
+% Stave 1
+% Bar 1
+b
+S3
+0fda   a
+0da   a
+0 c
+% Bar 2
+b
+0.c aa c
+1a
+0 d
+% Bar 3
+b
+0aa   d
+0ad  a
+0 c
+% Bar 4
+b
+0. d a  a
+#2 c
+x a
+0  d
+% Bar 5
+b
+0 d a
+0a   e
+0c  a
+% Bar 6
+b
+0.dab  d
+#2c
+xa
+0 d
+% Bar 7
+b
+0c  a
+0a   a
+0 c
+% Bar 8
+b
+0. daac
+#2 c
+x a
+0  d  c
+% Bar 9
+b
+
+% Stave 2
+% Bar 9
+b
+0. a   d
+#2  d
+x  b
+0  a   a
+% Bar 10
+b
+0   ca
+0     c
+0  a
+% Bar 11
+b
+0  b  a
+0   c
+0  d  c
+% Bar 12
+b
+0. a   d
+1 c
+0 d
+% Bar 13
+b
+0a
+0c    c
+0d    a
+% Bar 14
+b
+0.fda   a
+1d
+0c
+% Bar 15
+b
+0  d
+0 a a
+0 c  e
+% Bar 16
+b
+0. d  c
+1a
+0c
+% Bar 17
+b
+0 a
+0 c c
+0 d a
+% Bar 18
+b
+
+% Stave 3
+% Bar 18
+b
+0. c  a
+1 d
+0a
+% Bar 19
+b
+0   a
+0   c a
+0  a   a
+% Bar 20
+b
+0.  b  a
+1  d  c
+0 a   d
+% Bar 21
+b
+0 c  a
+0 d  c
+0a d e
+% Bar 22
+b
+0.c da
+1d
+0f
+% Bar 23
+b
+0 dd  c
+0add a
+0 c
+% Bar 24
+b
+0. daa  a
+1a
+0 d
+% Bar 25
+.bb.
+0  da
+0  d e
+0 ac c
+% Bar 26
+b
+0. cd a
+1 d
+#1a
+x     d
+% Bar 27
+b
+
+% Stave 4
+% Bar 27
+b
+1.c    c
+2d
+#1f
+x d
+#1d    a
+x c
+% Bar 28
+b
+0.cd    a
+1a
+0 d
+% Bar 29
+b
+1.a   d
+2c
+#1d
+x    c
+#1c   a
+x b
+% Bar 30
+b
+1.da   d
+2 c
+#1 d
+xa
+#1 c  a
+x  b
+% Bar 31
+b
+1. da c
+2a
+#1c
+x d
+#1a    d
+x d
+% Bar 32
+b
+
+% Stave 5
+% Bar 32
+b
+1. c  a
+2 d
+#1a
+x  d
+#1 d   c
+x c
+% Bar 33
+b
+1. a   d
+2 c
+0 d   c
+0acb  a
+% Bar 34
+b
+0.cd    a
+1a
+0 d
+% Bar 35
+b
+0 c
+0 ad  a
+0  c
+% Bar 36
+b
+0.acd a
+1 d
+0a
+% Bar 37
+b
+0  d  c
+0 d  c
+0 c
+% Bar 38
+b
+0. a a d
+1 c
+0 a
+% Bar 39
+b
+0  d  c
+0 ab  a
+0 c
+% Bar 40
+b
+
+% Stave 6
+% Bar 40
+b
+0. daac
+1a
+0 d
+% Bar 41
+b
+0. cd  c
+1 d
+0 c
+% Bar 42
+b
+0. ab  d
+1 b
+0 a
+% Bar 43
+b
+0.  da  a
+1 a
+0  d
+% Bar 44
+b
+0.  b  a
+1  d
+0  b
+% Bar 45
+b
+0.  aac
+1  c
+0  d  c
+% Bar 46
+b
+0. a a d
+1 c
+0 d
+% Bar 47
+b
+0  de
+0add a
+0 c
+% Bar 48
+b
+0. daa  a
+1a
+0 d
+% Bar 49
+.bb
+e
