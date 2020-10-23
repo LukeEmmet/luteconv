@@ -5,12 +5,18 @@ project(luteconv CXX)
 # Semantic versioning
 set(VERSION "1.0.0")
 
-# Harden
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -Wall -g -fPIE -fstack-protector-strong -Wformat -Wformat-security -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now")
+if(NOT ${CMAKE_BUILD_TYPE} MATCHES "Debug")
+	set(CMAKE_BUILD_TYPE "Release")
+endif()
 
-if (CMAKE_BUILD_TYPE MATCHES "^Release")
+# Harden
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -Wall -fPIE -fstack-protector-strong -Wformat -Wformat-security -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now")
+
+if (CMAKE_BUILD_TYPE MATCHES "Release")
 	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -o2")
 	add_definitions(-D_FORTIFY_SOURCE=2)
+else()
+	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g")
 endif()
 
 add_definitions(-DVERSION=${VERSION})
@@ -23,19 +29,17 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 enable_testing()
 
-find_library(GTEST_LIBRARY NAMES gtest REQUIRED)
 find_library(PUGIXML_LIBRARY NAMES pugixml REQUIRED)
-find_library(ZIP_LIBRARY NAMES libzip.so.5 REQUIRED)
+find_library(ZIP_LIBRARY NAMES zip REQUIRED)
 include(FindZLIB)
-
-include_directories(${CMAKE_SOURCE_DIR}/src)
+include(FindGTest)
 
 add_subdirectory(src)
 add_subdirectory(test)
 
 # Packaging
 set(CPACK_PACKAGE_VERSION ${VERSION})
-set(CPACK_GENERATOR "RPM" "DEB")
+set(CPACK_GENERATOR "RPM" "DEB" "TGZ")
 set(CPACK_PACKAGE_NAME ${PROJECT_NAME})
 set(CPACK_PACKAGE_RELEASE 1)
 set(CPACK_PACKAGE_CONTACT "Paul Overell")

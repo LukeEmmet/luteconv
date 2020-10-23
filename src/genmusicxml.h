@@ -3,8 +3,7 @@
 
 #include <iostream>
 
-#include <xmlwriter.h>
-
+#include "xmlwriter.h"
 #include "piece.h"
 #include "options.h"
 

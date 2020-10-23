@@ -1,3 +1,5 @@
+include_directories(${CMAKE_SOURCE_DIR}/src)
+
 # pitch_test
 add_executable(pitch_test pitch_test.cpp)
 target_link_libraries(pitch_test
@@ -5,7 +7,7 @@ target_link_libraries(pitch_test
     ${ZLIB_LIBRARIES}
     ${ZIP_LIBRARY}
     ${PUGIXML_LIBRARY}
-	${GTEST_LIBRARY}
+	${GTEST_LIBRARIES}
 )
 
 add_test(pitch_test ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/pitch_test)
@@ -17,7 +19,7 @@ target_link_libraries(options_test
     ${ZLIB_LIBRARIES}
     ${ZIP_LIBRARY}
     ${PUGIXML_LIBRARY}
-	${GTEST_LIBRARY}
+	${GTEST_LIBRARIES}
 )
 
 add_test(options_test ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/options_test)
@@ -30,7 +32,7 @@ target_link_libraries(convert_test
     ${ZLIB_LIBRARIES}
     ${ZIP_LIBRARY}
     ${PUGIXML_LIBRARY}
-    ${GTEST_LIBRARY}
+    ${GTEST_LIBRARIES}
 )
 
 add_test(convert_test ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/convert_test)

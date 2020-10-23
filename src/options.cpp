@@ -51,15 +51,16 @@ void Options::PrintHelp()
             << "   if a file format is not specified then the filetype is used." << std::endl
             << std::endl
             << "tuning = Courses in scientific pitch notation, in increasing course number." << std::endl
-            << "   Use --tuning if specified" << std::endl
-            << "   else use tuning specified in the source file, if any" << std::endl
-            << "   else based on number of courses used:" << std::endl
-            << "   = 8   \"G4 D4 A3 F3 C3 G2 F2 D2\"" << std::endl
-            << "   <= 10 \"G4 D4 A3 F3 C3 G2 F2 Eb2 D2 C2\"" << std::endl
-            << "   >= 11 \"F4 D4 A3 F3 D3 A2 G2 F2 E2 D2 C2 B1 A1\"" << std::endl
-            << "   --7tuning will then modify the above" << std::endl
+            << "    Luteconv uses the tuning specifed by option --tuning, if given; otherwise" << std::endl
+            << "    the tuning specified in the source file, if any; otherwise the" << std::endl
+            << "    tuning is based on the number of courses used in the piece as follows:" << std::endl
+            << "    = 8   \"G4 D4 A3 F3 C3 G2 F2 D2\"" << std::endl
+            << "    <= 10 \"G4 D4 A3 F3 C3 G2 F2 Eb2 D2 C2\"" << std::endl
+            << "    >= 11 \"F4 D4 A3 F3 D3 A2 G2 F2 E2 D2 C2 B1 A1\"" << std::endl
+            << "    Option --7tuning, if given, will then modify the tuning of the" << std::endl
+            << "    7th, 8th, ... courses." << std::endl
             << std::endl
-            << "Where the source format allows more that one piece per file" << std::endl
+            << "Where the source format allows more than one piece per file" << std::endl
             << "the --index option selects the desired piece, counting from 0.  Default 0." << std::endl
             << std::endl
             << "Report bugs to: paul@bayleaf.org.uk" << std::endl

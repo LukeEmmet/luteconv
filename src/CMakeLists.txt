@@ -12,5 +12,5 @@ target_link_libraries(luteconv
 	
 install(TARGETS luteconv
 	RUNTIME
-	DESTINATION "/usr/local/bin"
+	DESTINATION "bin"
 )
