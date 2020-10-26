@@ -5,6 +5,7 @@
 #include <zip.h>
 
 #include "genmusicxml.h"
+#include "platform.h"
 
 namespace luteconv
 {
@@ -56,7 +57,7 @@ void GenMxl::Generate(const Options& options, const Piece& piece)
         
         // construct inner filename from archive name bar/foo.mxl -> foo.xml
         musicxmlFilename = options.m_dstFilename;
-        const size_t slash = musicxmlFilename.find_last_of("/");
+        const size_t slash = musicxmlFilename.find_last_of(pathSeparator);
         if (slash != std::string::npos)
             musicxmlFilename = musicxmlFilename.substr(slash + 1);
 

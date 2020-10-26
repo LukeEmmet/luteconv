@@ -1,6 +1,6 @@
 #include "converter.h"
 
-#include <stdlib.h>
+#include <cstdlib>
 #include <iostream>
 #include <stdexcept>
 #include <string>

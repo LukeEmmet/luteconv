@@ -8,6 +8,7 @@
 #include <iomanip>
 
 #include "logger.h"
+#include "platform.h"
 
 namespace luteconv
 {
@@ -27,7 +28,7 @@ void ParserTabCode::Parse(std::istream& src, const Options& options, Piece& piec
 
     // As far as I can see TabCode doesn't have syntax for the title, composer or copyright.
     // Use the filename for the title
-    const size_t slash = options.m_srcFilename.find_last_of('/');
+    const size_t slash = options.m_srcFilename.find_last_of(pathSeparator);
     if (slash == std::string::npos)
         piece.m_title = options.m_srcFilename;
     else

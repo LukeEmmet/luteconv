@@ -4,6 +4,7 @@
 #include "pitch.h"
 
 #include <string>
+#include <sstream>
 
 namespace luteconv
 {
@@ -67,7 +68,7 @@ public:
     std::string m_index{"0"};
     
 private:
-    void PrintHelp();
+    void PrintHelp(const std::string & allowed);
     Format GetFormat(const std::string& format);
     Format GetFormatFilename(const std::string& filename);
     TabType GetTabType(const std::string& tabType);

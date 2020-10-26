@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.10)
 project(luteconv CXX)
 
 # Semantic versioning
-set(VERSION "1.0.0")
+set(VERSION "1.1.0")
 
 if(NOT ${CMAKE_BUILD_TYPE} MATCHES "Debug")
 	set(CMAKE_BUILD_TYPE "Release")
@@ -33,6 +33,8 @@ find_library(PUGIXML_LIBRARY NAMES pugixml REQUIRED)
 find_library(ZIP_LIBRARY NAMES zip REQUIRED)
 include(FindZLIB)
 include(FindGTest)
+
+include_directories(${CMAKE_SOURCE_DIR}/external)
 
 add_subdirectory(src)
 add_subdirectory(test)

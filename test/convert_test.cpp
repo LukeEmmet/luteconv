@@ -25,7 +25,7 @@ public:
     void ConvertOneTest(const std::string& originalDir, const std::string& dstDir,
             const std::string& convertedDir, const std::string& filename);
 
-    void Diff(const std::string& lhs, const std::string rhs);
+    void Diff(const std::string& lhs, const std::string& rhs);
     
     std::string m_binaryDir;
     std::string m_sourceDir;
@@ -77,7 +77,7 @@ void LuteConvFixture::ConvertOneTest(const std::string& originalDir, const std::
     }
 }
 
-void LuteConvFixture::Diff(const std::string& lhs, const std::string rhs)
+void LuteConvFixture::Diff(const std::string& lhs, const std::string& rhs)
 {
     std::fstream lhsStream(lhs.c_str(), std::fstream::in);
     std::fstream rhsStream(rhs.c_str(), std::fstream::in);

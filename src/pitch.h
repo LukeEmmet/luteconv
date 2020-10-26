@@ -32,7 +32,7 @@ public:
      * 
      * @param[in] midi note
      */
-    Pitch(int midi);
+    explicit Pitch(int midi);
         
     /**
      * Get MIDI note. Middle C is 60

@@ -1,5 +1,7 @@
 #include "options.h"
-#include <getopt.h>
+
+#include <popl/include/popl.hpp>
+
 #include <iostream>
 
 #include "logger.h"
@@ -18,7 +20,7 @@ Options::Options()
 #undef STRINGIFY
 #undef XSTRINGIFY
 
-void Options::PrintHelp()
+void Options::PrintHelp(const std::string & allowed)
 {
     std::cout << "luteconv " << m_version << std::endl
             << "Convert between lute tablature file formats." << std::endl
@@ -26,20 +28,8 @@ void Options::PrintHelp()
             << "Supported desination formats: musicxml, mxl, tab, tc" << std::endl
             << "Usage: luteconv [options ...] source-file [destination-file]" << std::endl
             << std::endl
-            << "options:" << std::endl
-            << "--help                      Show help" << std::endl
-            << "--version                   Show version" << std::endl
-            << "--output <destination-file> Set destination-file" << std::endl
-            << "--Srctabtype <tabtype>      Set source tablature type" << std::endl
-            << "--Dsttabtype <tabtype>      Set destination tablature type" << std::endl
-            << "--srcformat <format>        Set source format" << std::endl
-            << "--dstformat <format>        Set destination format" << std::endl
-            << "--tuning <tuning>           Set tuning for all courses" << std::endl
-            << "--7tuning <tuning>          Set tuning from 7th course" << std::endl
-            << "--index                     Set section index" << std::endl
-            << "--Verbose                   Set verbose output" << std::endl
-            << std::endl
-            << "The destination-file can be specified either using the --output option" << std::endl
+            << allowed << std::endl
+             << "The destination-file can be specified either using the --output option" << std::endl
             << "or as the 2nd positional parameter, this conforms with GNU options guidelines." << std::endl
             << std::endl
             << "tabtype = \"french\" | \"italian\" | \"spanish\"" << std::endl
@@ -71,105 +61,105 @@ void Options::PrintHelp()
 
 void Options::ProcessArgs(int argc, char** argv)
 {
-    const char* const short_opts = "7:d:D:hi:o:S:s:t:vV";
-    const option long_opts[] = {
-            {"7tuning", required_argument, nullptr, '7'},
-            {"dstformat", required_argument, nullptr, 'd'},
-            {"Dsttabtype", required_argument, nullptr, 'D'},
-            {"help", no_argument, nullptr, 'h'},
-            {"index", required_argument, nullptr, 'i'},
-            {"output", required_argument, nullptr, 'o'},
-            {"Srctabtype", required_argument, nullptr, 'T'},
-            {"srcformat", required_argument, nullptr, 's'},
-            {"tuning", required_argument, nullptr, 't'},
-            {"version", no_argument, nullptr, 'v'},
-            {nullptr, no_argument, nullptr, 0}
-    };
-
-    while (true)
+    // Using popl library rather than POSIX getopt so can compile for non-POSIX platforms, e.g. Windows
+    using namespace popl;
+    
+    OptionParser op("Allowed options");
+    auto helpOption = op.add<Switch>("h", "help", "Show help");
+    auto versionOption = op.add<Switch>("v", "version", "Show version");
+    auto outputOption = op.add<Value<std::string>>("o", "output", "Set destination-file", "", &m_dstFilename);
+    auto srcTabTypeOption = op.add<Value<std::string>>("S", "Srctabtype", "Set source tablature type");
+    auto dstTabTypeOption = op.add<Value<std::string>>("D", "Dsttabtype", "Set destination tablature type", "french");
+    auto srcFormatOption = op.add<Value<std::string>>("s", "srcformat", "Set source format");
+    auto dstFormatOption = op.add<Value<std::string>>("d", "dstformat", "Set destination format");
+    auto tuningOption = op.add<Value<std::string>>("t", "tuning", "Set tuning for all courses");
+    auto sevenTuningOption = op.add<Value<std::string>>("7", "7tuning", "Set tuning from 7th course");
+    auto indexOption = op.add<Value<std::string>>("i", "index", "Set section index", "0", &m_index);
+    auto verboseOption = op.add<Switch>("V", "Verbose", "Set verbose output");
+    
+    op.parse(argc, argv);
+    
+    if (!op.unknown_options().empty())
     {
-        const auto opt = getopt_long(argc, argv, short_opts, long_opts, nullptr);
-
-        if (-1 == opt)
-            break;
-
-        switch (opt)
-        {
-        case '7':
-        {
-            Pitch pitch;
-            pitch.SetTuning(optarg, m_7tuning);
-            break;
-        }
+        std::ostringstream ss;
+        ss << "Error: unknown option " << op.unknown_options()[0];
+        throw std::runtime_error(ss.str().c_str());
+    }
+    
+    if (op.non_option_args().size() > 2)
+    {
+        throw std::runtime_error("Error: too many arguments");
+    }
+    
+    if (helpOption->is_set())
+    {
+        std::ostringstream ss;
+        ss << op;
+        PrintHelp(ss.str());
+        exit(0);
+    }
         
-        case 'D':
-            m_dstTabType = GetTabType(optarg);
-            break;
-            
-        case 'd':
-            m_dstFormat = GetFormat(optarg);
-            break;
-            
-        case 'h': // -h or –help
-            PrintHelp();
-            exit(0);
-            
-        case 'i':
-            m_index = optarg;
-            break;
-            
-        case 'o':
-            m_dstFilename = optarg;
-            break;
+    if (versionOption->is_set())
+    {
+        std::cout << "luteconv " << m_version << std::endl
+        << "Copyright (C) 2020 Paul Overell" << std::endl
+        << "License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>" << std::endl
+        << "This is free software: you are free to change and redistribute it." << std::endl
+        << "There is NO WARRANTY, to the extent permitted by law." << std::endl
+        ;
+        exit(0);
+    }
+    
+    if (srcTabTypeOption->is_set())
+    {
+        m_srcTabType = GetTabType(srcTabTypeOption->value());
+    }    
 
-        case 'S':
-            m_srcTabType = GetTabType(optarg);
-            break;
-            
-        case 's':
-            m_srcFormat = GetFormat(optarg);
-            break;
+    if (dstTabTypeOption->is_set())
+    {
+        m_dstTabType = GetTabType(dstTabTypeOption->value());
+    }    
 
-        case 't':
-        {
-            Pitch pitch;
-            pitch.SetTuning(optarg, m_tuning);
-            break;
-        }
+    if (srcFormatOption->is_set())
+    {
+        m_srcFormat = GetFormat(srcFormatOption->value());
+    }
+    
+    if (dstFormatOption->is_set())
+    {
+        m_dstFormat = GetFormat(dstFormatOption->value());
+    }
 
-        case 'v':
-            std::cout << "luteconv " << m_version << std::endl
-            << "Copyright (C) 2020 Paul Overell" << std::endl
-            << "License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>" << std::endl
-            << "This is free software: you are free to change and redistribute it." << std::endl
-            << "There is NO WARRANTY, to the extent permitted by law." << std::endl
-            ;
-            exit(0);
-            break;
+    if (tuningOption->is_set())
+    {
+        Pitch pitch;
+        pitch.SetTuning(tuningOption->value().c_str(), m_tuning);
+    }
 
-        case 'V':
-            Logger::SetVerbose(true);
-            break;
-            
-        case '?': // Unrecognized option
-        default:
-            exit(1);
-        }
+    if (sevenTuningOption->is_set())
+    {
+        Pitch pitch;
+        pitch.SetTuning(sevenTuningOption->value().c_str(), m_7tuning);
+    }
+
+    if (verboseOption->is_set())
+    {
+        Logger::SetVerbose(true);
     }
     
     // source filename
-    if (optind < argc)
+    if (op.non_option_args().size() >= 1)
     {
-        m_srcFilename = argv[optind++];
+        m_srcFilename = op.non_option_args()[0];
     }
     else
     {
         throw std::runtime_error(std::string("Error: source filename missing"));
     }
     
-    if (optind < argc)
+    if (op.non_option_args().size() >= 2)
     {
-        m_dstFilename = argv[optind];
+        m_dstFilename = op.non_option_args()[1];
     }
     
     if (m_dstFilename.empty())

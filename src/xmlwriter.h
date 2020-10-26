@@ -96,14 +96,14 @@ public:
      * 
      * @param[in] value
      */
-    XMLContent(const char* value);
+    explicit XMLContent(const char* value);
     
     /**
      * Constructor
      * 
      * @param[in] value
      */
-    XMLContent(int value);
+    explicit XMLContent(int value);
     
     /**
      * Destructor
@@ -143,7 +143,7 @@ public:
      * 
      * @param[in] comment
      */
-    XMLComment(const char* comment);
+    explicit XMLComment(const char* comment);
     
     /**
      * Destructor
@@ -173,7 +173,7 @@ public:
      * 
      * @param[in] name
      */
-    XMLElement(const char* name);
+    explicit XMLElement(const char* name);
     
     /**
      * Constructor with content

@@ -27,9 +27,18 @@ void ParserTab::Parse(std::istream& src, const Options& options, Piece& piece)
     Bar bar;
     bool barIsClear{true};
     int section{0};
-    int target{std::stoi(options.m_index)};
     TabType tabType = options.m_srcTabType;
     int topString{tabType == TabItalian ? 6 : 1};
+    
+    int target{0};
+    try
+    {
+        target = std::stoi(options.m_index);
+    }
+    catch (...)
+    {
+        LOGGER << "option --index=" << options.m_index << " is not a number, ignored";
+    }
     
     while (!src.eof())
     {
@@ -620,7 +629,7 @@ void ParserTab::ParseChord(const std::string& line, int lineNo, Bar& bar, bool& 
                 break;
             }
             
-            if (idx < line.size() - 1 && (line[idx] == '!' || (line[idx] == '\\' && line[idx] == '\\')))
+            if (idx < line.size() - 1 && (line[idx] == '!' || (line[idx] == '\\' && line[idx + 1] == '\\')))
             {
                 // escape operator or \\ one backslash in note position
                 idx += 2;

@@ -69,7 +69,7 @@ void ParserFt3::Gunzip(const std::string& filename, std::vector<uint8_t>& ft3Ima
 void ParserFt3::ParseHeader(const std::vector<uint8_t>::const_iterator headerBegin,
         const std::vector<uint8_t>::const_iterator headerEnd, Piece& piece)
 {
-    std::vector<uint8_t>::const_iterator ptr{headerBegin + 14};
+    std::vector<uint8_t>::const_iterator ptr = headerBegin + 14;
     int strLen = *ptr++;
     piece.m_title = ExtractRtf(reinterpret_cast<const char *>(&*ptr), strLen);
     

@@ -71,7 +71,7 @@ void Unzipper::Unzip(const std::string& filename, std::vector<char>& image, std:
         zip_uint64_t blockSize = index[0].second + blockInc;
 
         zip_uint64_t imageSize{0};
-        image.resize(blockSize);
+        image.resize(static_cast<size_t>(blockSize));
         
         for (;;)
         {
@@ -88,10 +88,10 @@ void Unzipper::Unzip(const std::string& filename, std::vector<char>& image, std:
                 break;
         
             blockSize = blockInc;
-            image.resize(imageSize + blockSize);
+            image.resize(static_cast<size_t>(imageSize + blockSize));
         }
         
-        image.resize(imageSize);
+        image.resize(static_cast<size_t>(imageSize));
     }
     catch (...)
     {
