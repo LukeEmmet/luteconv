@@ -6,6 +6,7 @@
 #include <cctype>
 #include <chrono>
 #include <iomanip>
+#include <functional>
 
 #include "logger.h"
 
