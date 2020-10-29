@@ -1,2 +1,6 @@
 .project
 
+.hg/
+.vs/
+Debug/
+Release/

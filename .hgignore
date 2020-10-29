@@ -1,0 +1,6 @@
+syntax: glob
+Debug/*
+.vs/*
+.git/*
+.gitignore
+Release/*
