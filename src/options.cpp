@@ -24,20 +24,20 @@ void Options::PrintHelp(const std::string & allowed)
 {
     std::cout << "luteconv " << m_version << std::endl
             << "Convert between lute tablature file formats." << std::endl
-            << "Supported source formats: ft3, jtxml, jtz, musicxml, mxl, tab, tc" << std::endl
-            << "Supported desination formats: musicxml, mxl, tab, tc" << std::endl
+            << "Supported source formats: ft3, jtxml, jtz, mei, musicxml, mxl, tab, tc" << std::endl
+            << "Supported desination formats: mei, musicxml, mxl, tab, tc" << std::endl
             << "Usage: luteconv [options ...] source-file [destination-file]" << std::endl
             << std::endl
             << allowed << std::endl
-             << "The destination-file can be specified either using the --output option" << std::endl
+            << "The destination-file can be specified either using the --output option" << std::endl
             << "or as the 2nd positional parameter, this conforms with GNU options guidelines." << std::endl
             << std::endl
-            << "tabtype = \"french\" | \"italian\" | \"spanish\"" << std::endl
+            << "tabtype = \"french\" | \"german\" | \"italian\" | \"spanish\"" << std::endl
             << "   The source tablature type is usually deduced from the source-file.  However," << std::endl
             << "   for tab files it is necessary to distinguish between italian and spanish" << std::endl
             << "   tablatures. The default destination tablature type is french." << std::endl
             << std::endl
-            << "format = \"ft3\" | \"jtxml\" | \"jtz\" | \"musicxml\" | \"mxl\" | \"tab\" | \"tc\"" << std::endl
+            << "format = \"ft3\" | \"jtxml\" | \"jtz\" | \"mei\" | \"musicxml\" | \"mxl\" | \"tab\" | \"tc\"" << std::endl
             << "   if a file format is not specified then the filetype is used." << std::endl
             << std::endl
             << "tuning = Courses in scientific pitch notation, in increasing course number." << std::endl
@@ -75,6 +75,7 @@ void Options::ProcessArgs(int argc, char** argv)
     auto tuningOption = op.add<Value<std::string>>("t", "tuning", "Set tuning for all courses");
     auto sevenTuningOption = op.add<Value<std::string>>("7", "7tuning", "Set tuning from 7th course");
     auto indexOption = op.add<Value<std::string>>("i", "index", "Set section index", "0", &m_index);
+    auto flagsOption = op.add<Value<int>>("f", "flags", "Add flags to destination rhythm", 0, &m_flags);
     auto verboseOption = op.add<Switch>("V", "Verbose", "Set verbose output");
     
     op.parse(argc, argv);
@@ -187,9 +188,9 @@ TabType Options::GetTabType(const std::string& tabType)
         return TabFrench;
     else if (tabType == "italian")
         return TabItalian;
+    else if (tabType == "german")
+        return TabGerman;
     // not supported (yet!)
-//  else if (tabType == "german")
-//      return TabGerman;
 //  else if (tabType == "neopolitan")
 //      return TabNeopolitan;
     else if (tabType == "spanish")
@@ -216,6 +217,8 @@ Format Options::GetFormat(const std::string& format)
         return FormatJtxml;
     else if (format == "jtz")
         return FormatJtz;
+    else if (format == "mei")
+        return FormatMei;
     else if (format == "musicxml")
         return FormatMusicxml;
     else if (format == "mxl")

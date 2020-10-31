@@ -21,6 +21,8 @@ void Piece::SetTuning(const Options& options)
         }
     }
 
+    numCourses = std::max(numCourses, 6);
+    
     // tuning in the command line takes precedence
     // then tuning from source file
     // then default tuning based on number of numCourses
@@ -48,10 +50,7 @@ void Piece::SetTuning(const Options& options)
 
 void Bar::Clear()
 {
-    m_timeSymbol = TimeSyNone;
-    m_beats = 0;
-    m_beatType = 0;
-    
+    m_timeSig = TimeSig();
     m_barStyle = BarStyleRegular;
     m_repeat = RepNone;
     m_fermata = false;

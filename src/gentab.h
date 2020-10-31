@@ -45,7 +45,7 @@ public:
     
 private:
     static std::string GetTimeSignature(const Bar & bar);
-    static std::string GetFlagInfo(const std::vector<Chord> & chords, const Chord & our);
+    static std::string GetFlagInfo(const Options& options, const std::vector<Chord> & chords, const Chord & our);
     static std::string GetRightFingering(const Note & note);
     static std::string GetLeftFingering(const Note & note);
     static std::string GetRightOrnament(const Note & note);

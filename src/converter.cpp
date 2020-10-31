@@ -3,10 +3,12 @@
 #include "parserft3.h"
 #include "parserjtxml.h"
 #include "parserjtz.h"
+#include "parsermei.h"
 #include "parsermusicxml.h"
 #include "parsermxl.h"
 #include "parsertab.h"
 #include "parsertabcode.h"
+#include "genmei.h"
 #include "genmusicxml.h"
 #include "genmxl.h"
 #include "gentab.h"
@@ -46,6 +48,12 @@ void Converter::Convert(const Options& options)
         parser.Parse(options, piece);
         break;
     }
+    case FormatMei:
+    {
+        ParserMei parser;
+        parser.Parse(options, piece);
+        break;
+    }
     case FormatMusicxml:
     {
         ParserMusicXml parser;
@@ -81,6 +89,12 @@ void Converter::Convert(const Options& options)
     case FormatUnknown:
     {
         throw std::runtime_error(std::string("Error: Unknown destination file format: ") + options.m_dstFilename);
+    }
+    case FormatMei:
+    {
+        GenMei generator;
+        generator.Generate(options, piece);
+        break;
     }
     case FormatMusicxml:
     {

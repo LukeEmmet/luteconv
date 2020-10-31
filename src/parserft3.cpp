@@ -152,7 +152,7 @@ void ParserFt3::ParseBar(int barNum, const std::vector<uint8_t>::const_iterator 
         
         Chord chord;
         static_assert(NoteTypeQuarter == 4, "");
-        chord.m_noteType = static_cast<NoteType>(ptr[0] + 2); // musecore has crotchet with 0 flags
+        chord.m_noteType = static_cast<NoteType>(ptr[0] + 2); // crotchet with 0 flags
         if (ptr[1] & 0x02)
             chord.m_grid = GridStart;
         else if (ptr[1] & 0x04)
@@ -218,33 +218,33 @@ void ParserFt3::ParseTimeSignature(const std::vector<uint8_t>::const_iterator ba
     // time signature
     if (timeSignature == 0x01)
     {
-        bar.m_timeSymbol = TimeSyCommon;
-        bar.m_beats = 4;
-        bar.m_beatType = 4;
+        bar.m_timeSig.m_timeSymbol = TimeSyCommon;
+        bar.m_timeSig.m_beats = 4;
+        bar.m_timeSig.m_beatType = 4;
     }
     else if (timeSignature == 0x02)
     {
-        bar.m_timeSymbol = TimeSyCut;
-        bar.m_beats = 2;
-        bar.m_beatType = 2;
+        bar.m_timeSig.m_timeSymbol = TimeSyCut;
+        bar.m_timeSig.m_beats = 2;
+        bar.m_timeSig.m_beatType = 2;
     }
     else if (timeSignature == 0x03)
     {
-        bar.m_timeSymbol = TimeSySingleNumber;
-        bar.m_beats = 3;
-        bar.m_beatType = 4;
+        bar.m_timeSig.m_timeSymbol = TimeSySingleNumber;
+        bar.m_timeSig.m_beats = 3;
+        bar.m_timeSig.m_beatType = 4;
     }
     else if (timeSignature == 0x06)
     {
-        bar.m_timeSymbol = TimeSyNormal;
-        bar.m_beats = barBegin[9];
-        bar.m_beatType = barBegin[8];
+        bar.m_timeSig.m_timeSymbol = TimeSyNormal;
+        bar.m_timeSig.m_beats = barBegin[9];
+        bar.m_timeSig.m_beatType = barBegin[8];
     }
     else
     {
-        bar.m_timeSymbol = TimeSyNone;
-        bar.m_beats = 4;
-        bar.m_beatType = 4;
+        bar.m_timeSig.m_timeSymbol = TimeSyNone;
+        bar.m_timeSig.m_beats = 4;
+        bar.m_timeSig.m_beatType = 4;
     }
 }
 

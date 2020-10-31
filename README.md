@@ -23,6 +23,12 @@ Fronimo[2] is a commercial Windows lute tablature editor written by Francesco Tr
 ft3, is a closed, proprietary binary format.  Luke Emmet[3] has reverse engineered the format for his program LuteScribe
 so that some the data can be extracted.  I am grateful for his work on this.
 
+Music Encoding Initiative mei
+-----------------------------
+The Music Encoding Initiative (MEI)[12] is a community-driven effort to define a system for
+encoding musical documents in a machine-readable structure. This is an experimental
+implementation of some proposals from the Tablature Interest Group.
+
 MusicXML musicxml, mxl
 ----------------------
 MusicXML[4] is an music interchange file format and is supported by many music editing programs
@@ -43,11 +49,11 @@ Where there is a large searchable database of lute pieces.  TabCode is well docu
 
 Supported source formats
 ------------------------
-ft3, jtxml, jtz, musicxml, mxl, tab and tc.
+ft3, jtxml, jtz, mei, musicxml, mxl, tab and tc.
 
 Supported destination formats
 -----------------------------
-musicxml, mxl, tab and tc.
+mei, musicxml, mxl, tab and tc.
 
 Supporting proprietary destination formats (jtxml, jtz, ft3) is not possible as this would require
 complete knowledge of their structure and semantics, which is not available.  Whereas they can be used as
@@ -72,19 +78,20 @@ Usage
 -----
     Usage: luteconv [options ...] source-file [destination-file]
 
-    | option                      | function                       |
-    | ------                      | --------                       |
-    | --help                      | Show help                      |
-    | --version                   | Show version                   |
-    | --output <destination-file> | Set destination-file           |
-    | --Srctabtype <tabtype>      | Set source tablature type      |
-    | --Dsttabtype <tabtype>      | Set destination tablature type |
-    | --srcformat <format>        | Set source format              |
-    | --dstformat <format>        | Set destination format         |
-    | --tuning <tuning>           | Set tuning for all courses     |
-    | --7tuning <tuning>          | Set tuning from 7th course     |
-    | --index <index>             | Set section index              |
-    | --Verbose                   | Set verbose output             |
+    | option                      | function                        |
+    | ------                      | --------                        |
+    | --help                      | Show help                       |
+    | --version                   | Show version                    |
+    | --output <destination-file> | Set destination-file            |
+    | --Srctabtype <tabtype>      | Set source tablature type       |
+    | --Dsttabtype <tabtype>      | Set destination tablature type  |
+    | --srcformat <format>        | Set source format               |
+    | --dstformat <format>        | Set destination format          |
+    | --tuning <tuning>           | Set tuning for all courses      |
+    | --7tuning <tuning>          | Set tuning from 7th course      |
+    | --index <index>             | Set section index               |
+    | --flags <num>               | Add flags to destination rhythm |
+    | --Verbose                   | Set verbose output              |
 
 Options may use long or short syntax: --7tuning=D2 or -7D2
 
@@ -95,7 +102,7 @@ this conforms to the GNU Standards for Command Line Interfaces[9].
   
 if a file format is not specified then the filetype is used.
          
-    tabtype = "french" | "italian" | "spanish"
+    tabtype = "french" | "german" | "italian" | "spanish"
 
 The source tablature type is usually deduced from the source-file.  However, for tab
 files it is sometimes necessary to distinguish between italian and spanish tablatures.
@@ -115,6 +122,11 @@ Option --7tuning, if given, will then modify the tuning of the 7th, 8th, ... cou
          
 Where the source format allows more than one piece per file the --index option selects the
 desired piece, counting from 0.  Default 0.
+
+Some lute software encodes rhythm as the number of lute tablature flags, others
+encode the mensural note value (whole, half, quarter etc) unfortunately there is
+no fixed mapping between the two.  The --flags option adds (or subtracts) flags
+from the destination rhythm to adjust this mapping.  Default 0.
 
 Examples
 --------
@@ -161,6 +173,8 @@ suitable workspace directory:
     make test
     make package
 
+luteconv has build dependencies: zlib-devel, pugixml-devel, libzip-devel and gtest.
+
 The executable will be in build/bin.  The .rpm, .deb and .tar.gz packages will be in the build directory.
 
 TODO
@@ -189,4 +203,5 @@ References
 9.  [GNU](https://www.gnu.org/prep/standards/html_node/Command_002dLine-Interfaces.html)
 10. [Scientific Pitch Notation](https://en.wikipedia.org/wiki/Scientific_pitch_notation)
 11. [MuseScore](https://musescore.org/en)
+12. [MEI](https://music-encoding.org/)
 

@@ -61,7 +61,7 @@ void LuteConvFixture::ConvertOneTest(const std::string& originalDir, const std::
 {
     using namespace luteconv;
     
-    for (auto filetype : {".tab", ".musicxml", ".tc"})
+    for (auto filetype : {".mei", ".musicxml", ".tab", ".tc"})
     {
         Options options;
         options.m_srcFilename = originalDir + "/" + filename;

@@ -10,7 +10,7 @@ if(NOT ${CMAKE_BUILD_TYPE} MATCHES "Debug")
 endif()
 
 # Harden
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -Wall -fPIE -fstack-protector-strong -Wformat -Wformat-security -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -pthread -Wall -fPIE -fstack-protector-strong -Wformat -Wformat-security -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now")
 
 if (CMAKE_BUILD_TYPE MATCHES "Release")
 	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -o2")

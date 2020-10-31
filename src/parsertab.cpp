@@ -47,7 +47,7 @@ void ParserTab::Parse(std::istream& src, const Options& options, Piece& piece)
         ++lineNo;
         
         // remove trailing spaces
-        line.erase(std::find_if(line.rbegin(), line.rend(), std::bind1st(std::not_equal_to<char>(), ' ')).base(), line.end());
+        line.erase(std::find_if_not(line.rbegin(), line.rend(), [](int c){return isspace(c);}).base(), line.end());
         
         // assume sections are separated by end of page
         if (line == "p")
@@ -704,27 +704,27 @@ void ParserTab::ParseTimeSignature(const std::string& line, Bar& bar)
 {
     if (line == "C" || line == "SC")
     {
-        bar.m_timeSymbol = TimeSyCommon;
-        bar.m_beats = 4;
-        bar.m_beatType = 4;
+        bar.m_timeSig.m_timeSymbol = TimeSyCommon;
+        bar.m_timeSig.m_beats = 4;
+        bar.m_timeSig.m_beatType = 4;
     }
     else if (line == "c" || line == "Sc")
     {
-        bar.m_timeSymbol = TimeSyCut;
-        bar.m_beats = 2;
-        bar.m_beatType = 2;
+        bar.m_timeSig.m_timeSymbol = TimeSyCut;
+        bar.m_timeSig.m_beats = 2;
+        bar.m_timeSig.m_beatType = 2;
     }
     else if (line.size() == 2 && line[1] >= '1' && line[1] <= '9')
     {
-        bar.m_timeSymbol = TimeSySingleNumber;
-        bar.m_beats = line[1] - '0';
-        bar.m_beatType = 4;
+        bar.m_timeSig.m_timeSymbol = TimeSySingleNumber;
+        bar.m_timeSig.m_beats = line[1] - '0';
+        bar.m_timeSig.m_beatType = 4;
     }
     else if (line.size() == 3 && line[1] >= '1' && line[1] <= '9' && line[2] >= '1' && line[2] <= '9')
     {
-        bar.m_timeSymbol = TimeSyNormal;
-        bar.m_beats = line[1] - '0';
-        bar.m_beatType = line[2] - '0';
+        bar.m_timeSig.m_timeSymbol = TimeSyNormal;
+        bar.m_timeSig.m_beats = line[1] - '0';
+        bar.m_timeSig.m_beatType = line[2] - '0';
     }
 }
 

@@ -83,7 +83,7 @@ void GenTabCode::Generate(const Options& options, const Piece& piece, std::ostre
             ++chordCount;
             
             // flags
-            std::string tabWord{GetFlagInfo(bar.m_chords, chord)};
+            std::string tabWord{GetFlagInfo(options, bar.m_chords, chord)};
             
             // notes. TabCode uses fret/string pairs so ordering in a tabword shouldn't matter,
             // but assume that it does.
@@ -172,7 +172,7 @@ void GenTabCode::Generate(const Options& options, const Piece& piece, std::ostre
     
 std::string GenTabCode::GetTimeSignature(const Bar & bar)
 {
-    switch (bar.m_timeSymbol)
+    switch (bar.m_timeSig.m_timeSymbol)
     {
     case TimeSyNone:
         return "";
@@ -181,18 +181,18 @@ std::string GenTabCode::GetTimeSignature(const Bar & bar)
     case TimeSyCut:
         return "M(C/)";
     case TimeSySingleNumber:
-        return "M(" + std::to_string(bar.m_beats) + ")";
+        return "M(" + std::to_string(bar.m_timeSig.m_beats) + ")";
     case TimeSyNote:
         return "";
     case TimeSyDottedNote:
         return "";
     case TimeSyNormal:
-        return "M(" + std::to_string(bar.m_beats) + "/" + std::to_string(bar.m_beatType) + ")";
+        return "M(" + std::to_string(bar.m_timeSig.m_beats) + "/" + std::to_string(bar.m_timeSig.m_beatType) + ")";
     }
     return "";
 }
 
-std::string GenTabCode::GetFlagInfo(const std::vector<Chord> & chords, const Chord & our)
+std::string GenTabCode::GetFlagInfo(const Options& options, const std::vector<Chord> & chords, const Chord & our)
 {
     if (our.m_fermata)
         return "F";
@@ -201,9 +201,12 @@ std::string GenTabCode::GetFlagInfo(const std::vector<Chord> & chords, const Cho
         return "";
     
     // TabCode documentation has Q = 1 flag, therefore B = NoteTypeWhole, not NoteTypeBreve
+    NoteType adjusted{static_cast<NoteType>(our.m_noteType - 1 + options.m_flags)};
+    adjusted = std::max(NoteTypeBreve, adjusted);
+    adjusted = std::min(NoteType256th, adjusted);
     const std::string flags{"BWHQESTYZ"};
     std::string ourFlags;
-    ourFlags = flags[(our.m_noteType >= NoteTypeWhole) ? our.m_noteType - NoteTypeWhole : NoteTypeWhole];
+    ourFlags = flags[adjusted - NoteTypeBreve];
     
     // dotted
     if (our.m_dotted)

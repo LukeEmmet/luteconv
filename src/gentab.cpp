@@ -5,6 +5,7 @@
 #include <chrono>
 #include <iomanip>
 
+#include "logger.h"
 
 namespace luteconv
 {
@@ -21,6 +22,11 @@ void GenTab::Generate(const Options& options, const Piece& piece)
 
 void GenTab::Generate(const Options& options, const Piece& piece, std::ostream& dst)
 {
+    if (options.m_dstTabType == TabGerman)
+    {
+        throw std::runtime_error("Error: Tab does not support german tablature");
+    }
+
     std::time_t tt = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
     struct std::tm * ptm = std::gmtime(&tt);
     
@@ -145,7 +151,7 @@ void GenTab::Generate(const Options& options, const Piece& piece, std::ostream& 
             ++chordCount;
             
             // flags
-            std::string line{GetFlagInfo(bar.m_chords, chord)};
+            std::string line{GetFlagInfo(options, bar.m_chords, chord)};
             
             // notes
             std::vector<std::string> vert;
@@ -203,7 +209,7 @@ void GenTab::Generate(const Options& options, const Piece& piece, std::ostream& 
             }
             
             // remove trailing spaces
-            line.erase(std::find_if(line.rbegin(), line.rend(), std::bind1st(std::not_equal_to<char>(), ' ')).base(), line.end());
+            line.erase(std::find_if_not(line.rbegin(), line.rend(), [](int c){return isspace(c);}).base(), line.end());
             
             dst << line << std::endl;
         }
@@ -278,7 +284,7 @@ void GenTab::Generate(const Options& options, const Piece& piece, std::ostream& 
     
 std::string GenTab::GetTimeSignature(const Bar & bar)
 {
-    switch (bar.m_timeSymbol)
+    switch (bar.m_timeSig.m_timeSymbol)
     {
     case TimeSyNone:
         return "";
@@ -287,18 +293,18 @@ std::string GenTab::GetTimeSignature(const Bar & bar)
     case TimeSyCut:
         return "c";
     case TimeSySingleNumber:
-        return "S" + std::to_string(bar.m_beats);
+        return "S" + std::to_string(bar.m_timeSig.m_beats);
     case TimeSyNote:
         return "";
     case TimeSyDottedNote:
         return "";
     case TimeSyNormal:
-        return "S" + std::to_string(bar.m_beats) + "-" + std::to_string(bar.m_beatType);
+        return "S" + std::to_string(bar.m_timeSig.m_beats) + "-" + std::to_string(bar.m_timeSig.m_beatType);
     }
     return "";
 }
 
-std::string GenTab::GetFlagInfo(const std::vector<Chord> & chords, const Chord & our)
+std::string GenTab::GetFlagInfo(const Options& options, const std::vector<Chord> & chords, const Chord & our)
 {
     std::string result;
     std::string ourFlag;
@@ -310,24 +316,28 @@ std::string GenTab::GetFlagInfo(const std::vector<Chord> & chords, const Chord &
     if (our.m_fermata)
         return "Y";
     
-    // TODO TAB thinks 0 flags = crotchet
-    if (our.m_noteType >= NoteTypeQuarter)
+    // TAB thinks 0 flags = crotchet
+    NoteType adjusted{static_cast<NoteType>(our.m_noteType + options.m_flags)};
+    adjusted = std::max(NoteTypeLong, adjusted);
+    adjusted = std::min(NoteType128th, adjusted);
+    
+    if (adjusted >= NoteTypeQuarter)
     {
-        ourFlag = std::to_string(our.m_noteType - NoteTypeQuarter);
+        ourFlag = std::to_string(adjusted - NoteTypeQuarter);
     }
-    else if (our.m_noteType == NoteTypeHalf)
+    else if (adjusted == NoteTypeHalf)
     {
         ourFlag = "w";
     }
-    else if (our.m_noteType == NoteTypeWhole)
+    else if (adjusted == NoteTypeWhole)
     {
         ourFlag = "W";
     }
-    else if (our.m_noteType == NoteTypeBreve)
+    else if (adjusted == NoteTypeBreve)
     {
         ourFlag = "B";
     }
-    else if (our.m_noteType == NoteTypeLong)
+    else if (adjusted == NoteTypeLong)
     {
         ourFlag = "L";
     }

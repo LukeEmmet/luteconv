@@ -15,6 +15,7 @@ enum Format
     FormatFt3,          // Fronimo
     FormatJtxml,        // Fandando
     FormatJtz,          // Fandango zip
+    FormatMei,          // Music Encoding Initiative (Tablature Interest Group)
     FormatMusicxml,     // MusicXML
     FormatMxl,          // MusicXML zip
     FormatTab,          // Tab
@@ -66,6 +67,7 @@ public:
     std::string m_dstFilename;
     const std::string m_version;
     std::string m_index{"0"};
+    int m_flags{0};
     
 private:
     void PrintHelp(const std::string & allowed);
