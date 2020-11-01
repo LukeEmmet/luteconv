@@ -25,7 +25,7 @@ void GenTabCode::Generate(const Options& options, const Piece& piece, std::ostre
     struct std::tm * ptm = std::gmtime(&tt);
     
     // TabCode has no syntax for title, composer etc.  Just put everything in comments.
-    dst << "{ Converted to .tab by luteconv " << options.m_version << " }" << std::endl
+    dst << "{ Converted to TabCode .tc by luteconv " << options.m_version << " }" << std::endl
         << "{ encoding-date " << std::put_time(ptm,"%F") << " }" << std::endl;
 
     if (!piece.m_copyright.empty())
