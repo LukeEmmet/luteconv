@@ -7,6 +7,7 @@
 #include <sstream>
 #include <iostream>
 #include <fstream>
+#include <algorithm>
 
 #include "musicxml.h"
 
