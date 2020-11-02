@@ -15,64 +15,64 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\converter.cpp">
+    <ClCompile Include="..\src\converter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\genmusicxml.cpp">
+    <ClCompile Include="..\src\genmusicxml.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\genmxl.cpp">
+    <ClCompile Include="..\src\genmxl.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\gentab.cpp">
+    <ClCompile Include="..\src\gentab.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\gentabcode.cpp">
+    <ClCompile Include="..\src\gentabcode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\logger.cpp">
+    <ClCompile Include="..\src\logger.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\main.cpp">
+    <ClCompile Include="..\src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\musicxml.cpp">
+    <ClCompile Include="..\src\musicxml.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\options.cpp">
+    <ClCompile Include="..\src\options.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\parserft3.cpp">
+    <ClCompile Include="..\src\parserft3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\parserjtxml.cpp">
+    <ClCompile Include="..\src\parserjtxml.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\parserjtz.cpp">
+    <ClCompile Include="..\src\parserjtz.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\parsermusicxml.cpp">
+    <ClCompile Include="..\src\parsermusicxml.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\parsermxl.cpp">
+    <ClCompile Include="..\src\parsermxl.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\parsertab.cpp">
+    <ClCompile Include="..\src\parsertab.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\parsertabcode.cpp">
+    <ClCompile Include="..\src\parsertabcode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\piece.cpp">
+    <ClCompile Include="..\src\piece.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\pitch.cpp">
+    <ClCompile Include="..\src\pitch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\unzipper.cpp">
+    <ClCompile Include="..\src\unzipper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\xmlwriter.cpp">
+    <ClCompile Include="..\src\xmlwriter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="external\pugixml\src\pugixml.cpp">
@@ -92,67 +92,67 @@
     <ClInclude Include="external\libzip\include\zipwin32.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="external\popl\include\popl.hpp">
+    <ClInclude Include="..\external\popl\include\popl.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\converter.h">
+    <ClInclude Include="..\src\converter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\genmusicxml.h">
+    <ClInclude Include="..\src\genmusicxml.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\genmxl.h">
+    <ClInclude Include="..\src\genmxl.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\gentab.h">
+    <ClInclude Include="..\src\gentab.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\gentabcode.h">
+    <ClInclude Include="..\src\gentabcode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\logger.h">
+    <ClInclude Include="..\src\logger.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\musicxml.h">
+    <ClInclude Include="..\src\musicxml.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\options.h">
+    <ClInclude Include="..\src\options.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\parserft3.h">
+    <ClInclude Include="..\src\parserft3.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\parserjtxml.h">
+    <ClInclude Include="..\src\parserjtxml.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\parserjtz.h">
+    <ClInclude Include="..\src\parserjtz.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\parsermusicxml.h">
+    <ClInclude Include="..\src\parsermusicxml.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\parsermxl.h">
+    <ClInclude Include="..\src\parsermxl.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\parsertab.h">
+    <ClInclude Include="..\src\parsertab.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\parsertabcode.h">
+    <ClInclude Include="..\src\parsertabcode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\piece.h">
+    <ClInclude Include="..\src\piece.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\pitch.h">
+    <ClInclude Include="..\src\pitch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\platform.h">
+    <ClInclude Include="..\src\platform.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\unzipper.h">
+    <ClInclude Include="..\src\unzipper.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\xmlwriter.h">
+    <ClInclude Include="..\src\xmlwriter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
