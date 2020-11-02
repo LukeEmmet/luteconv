@@ -1,2 +1,7 @@
 .project
 
+.hg/
+.vs/
+Debug/
+Release/
+.hgignore
