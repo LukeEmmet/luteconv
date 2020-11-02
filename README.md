@@ -99,7 +99,7 @@ Options may use long or short syntax: --7tuning=D2 or -7D2
 The destination-file can be specified either using the --output option or as the 2nd positional parameter,
 this conforms to the GNU Standards for Command Line Interfaces[9].
  
-    format = "ft3" | "jtxml" | "jtz" | "musicxml" | "mxl" | "tab" | "tc"
+    format = "ft3" | "jtxml" | "jtz" | "mei" | "musicxml" | "mxl" | "tab" | "tc"
   
 if a file format is not specified then the filetype is used.
          
