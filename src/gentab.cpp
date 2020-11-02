@@ -218,12 +218,10 @@ void GenTab::Generate(const Options& options, const Piece& piece, std::ostream& 
         ++barNum;
         dst <<  "% Bar " << barNum << std::endl;
         
-        // TODO does Fronimo record stave endings?
         // Tab doesn't automatically add stave endings.  Use herustic:
         // count chords, when the threshold is reached end the stave at the end of
         // the current bar.  Except for last bar.
-        const int threshold = 25; // seems to work OK
-        const bool lineBreak = barNum < static_cast<int>(piece.m_bars.size()) && chordCount > threshold;
+        const bool lineBreak = barNum < static_cast<int>(piece.m_bars.size()) && chordCount > options.m_wrapThreshold;
         
         std::string barStyle;
         switch (bar.m_barStyle)

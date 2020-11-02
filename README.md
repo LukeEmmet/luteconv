@@ -78,20 +78,21 @@ Usage
 -----
     Usage: luteconv [options ...] source-file [destination-file]
 
-    | option                      | function                        |
-    | ------                      | --------                        |
-    | --help                      | Show help                       |
-    | --version                   | Show version                    |
-    | --output <destination-file> | Set destination-file            |
-    | --Srctabtype <tabtype>      | Set source tablature type       |
-    | --Dsttabtype <tabtype>      | Set destination tablature type  |
-    | --srcformat <format>        | Set source format               |
-    | --dstformat <format>        | Set destination format          |
-    | --tuning <tuning>           | Set tuning for all courses      |
-    | --7tuning <tuning>          | Set tuning from 7th course      |
-    | --index <index>             | Set section index               |
-    | --flags <num>               | Add flags to destination rhythm |
-    | --Verbose                   | Set verbose output              |
+    | option                         | function                        |
+    | ------                         | --------                        |
+    | -h --help                      | Show help                       |
+    | -v --version                   | Show version                    |
+    | -o --output <destination-file> | Set destination-file            |
+    | -S --Srctabtype <tabtype>      | Set source tablature type       |
+    | -D --Dsttabtype <tabtype>      | Set destination tablature type  |
+    | -s --srcformat <format>        | Set source format               |
+    | -d --dstformat <format>        | Set destination format          |
+    | -t --tuning <tuning>           | Set tuning for all courses      |
+    | -7 --7tuning <tuning>          | Set tuning from 7th course      |
+    | -i --index <index>             | Set section index               |
+    | -f --flags <num>               | Add flags to destination rhythm |
+    | -V --Verbose                   | Set verbose output              |
+    | -w --wrap                      | Set the stave wrap threshold    |
 
 Options may use long or short syntax: --7tuning=D2 or -7D2
 
@@ -128,6 +129,10 @@ encode the mensural note value (whole, half, quarter etc) unfortunately there is
 no fixed mapping between the two.  The --flags option adds (or subtracts) flags
 from the destination rhythm to adjust this mapping.  Default 0.
 
+Option --wrap, default 25.  Some formats require explicit stave line endings.
+Luteconv uses a herustic: count chords, when the threshold is reached end the
+stave at the end of the current bar.
+
 Examples
 --------
 
@@ -150,7 +155,7 @@ Convert 2nd piece from a Fandango collection to tab (index counts from 0)
 Download pre-built binary
 -------------------------
 
-Version 1.0.0
+Version: 1.0.0, tag: release-1.0.0
 
 * [luteconv-1.0.0-1.x86_64.rpm](http://www.overell.co.uk/luteconv/luteconv-1.0.0-1.x86_64.rpm) SHA-256:336be4f7387ec731f6c9d04baf9496eccdbebd07b2e206b350a053f30ed5b21d
 * [luteconv-1.0.0-1.x86_64.deb](http://www.overell.co.uk/luteconv/luteconv-1.0.0-1.x86_64.deb) SHA-256:032f5745bf35f25b3ffd7b8b74de2efbcd196360915b49e47b51dc1a4359ed78
@@ -172,6 +177,8 @@ suitable workspace directory:
     make
     make test
     make package
+
+The master branch is use for development.  Releases are tagged release-x.y.z
 
 luteconv has build dependencies: zlib-devel, pugixml-devel, libzip-devel and gtest.
 

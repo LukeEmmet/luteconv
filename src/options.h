@@ -68,6 +68,7 @@ public:
     const std::string m_version;
     std::string m_index{"0"};
     int m_flags{0};
+    int m_wrapThreshold{25};
     
 private:
     void PrintHelp(const std::string & allowed);

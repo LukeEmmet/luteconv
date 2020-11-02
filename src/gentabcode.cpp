@@ -122,8 +122,7 @@ void GenTabCode::Generate(const Options& options, const Piece& piece, std::ostre
         // Stave ending Use herustic:
         // count chords, when the threshold is reached end the stave at the end of
         // the current bar.  Except for last bar.
-        const int threshold = 25; // seems to work OK
-        const bool lineBreak = barNum < static_cast<int>(piece.m_bars.size()) && chordCount > threshold;
+        const bool lineBreak = barNum < static_cast<int>(piece.m_bars.size()) && chordCount > options.m_wrapThreshold;
         
         std::string barStyle;
         switch (bar.m_barStyle)

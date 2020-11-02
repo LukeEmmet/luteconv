@@ -77,6 +77,7 @@ void Options::ProcessArgs(int argc, char** argv)
     auto indexOption = op.add<Value<std::string>>("i", "index", "Set section index", "0", &m_index);
     auto flagsOption = op.add<Value<int>>("f", "flags", "Add flags to destination rhythm", 0, &m_flags);
     auto verboseOption = op.add<Switch>("V", "Verbose", "Set verbose output");
+    auto wrapOption = op.add<Value<int>>("w", "wrap", "Stave wrap threshold", 25, &m_wrapThreshold);
     
     op.parse(argc, argv);
     
