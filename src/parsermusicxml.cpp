@@ -243,13 +243,13 @@ void ParserMusicXml::ParseTimeSignature(xml_node& xmlmeasure, Piece& piece)
             {
                 if (timeSymbol == MusicXml::timeSymbol[i])
                 {
-                    bar.m_timeSymbol = static_cast<TimeSymbol>(i);
+                    bar.m_timeSig.m_timeSymbol = static_cast<TimeSymbol>(i);
                     break;
                 }
             }
         }
-        bar.m_beats = xmltime.child("beats").text().as_int();
-        bar.m_beatType = xmltime.child("beat-type").text().as_int();
+        bar.m_timeSig.m_beats = xmltime.child("beats").text().as_int();
+        bar.m_timeSig.m_beatType = xmltime.child("beat-type").text().as_int();
     }
 }
 

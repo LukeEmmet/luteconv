@@ -226,7 +226,7 @@ void ParserTabCode::ParseChord(const std::string& tabword, int lineNo, Bar& bar,
     if (flagPos != std::string::npos)
     {
         // TabCode documentation has Q = 1 flag, therefore B = NoteTypeWhole, not NoteTypeBreve
-        chord.m_noteType = static_cast<NoteType>(NoteTypeWhole + flagPos);
+        chord.m_noteType = static_cast<NoteType>(NoteTypeBreve + 1 + flagPos);
         ++idx;
         
         if (idx < tabword.size() && tabword[idx] == '.')
@@ -431,29 +431,29 @@ void ParserTabCode::ParseTimeSignature(const std::string& tabword, int lineNo, B
 {
     if (tabword == "M(C)")
     {
-        bar.m_timeSymbol = TimeSyCommon;
-        bar.m_beats = 4;
-        bar.m_beatType = 4;
+        bar.m_timeSig.m_timeSymbol = TimeSyCommon;
+        bar.m_timeSig.m_beats = 4;
+        bar.m_timeSig.m_beatType = 4;
     }
     else if (tabword == "M(C/)")
     {
-        bar.m_timeSymbol = TimeSyCut;
-        bar.m_beats = 2;
-        bar.m_beatType = 2;
+        bar.m_timeSig.m_timeSymbol = TimeSyCut;
+        bar.m_timeSig.m_beats = 2;
+        bar.m_timeSig.m_beatType = 2;
     }
     else if (tabword.size() == 4 && tabword[1] >= '1' && tabword[1] <= '9')
     {
         // M(3)
-        bar.m_timeSymbol = TimeSySingleNumber;
-        bar.m_beats = tabword[1] - '0';
-        bar.m_beatType = 4;
+        bar.m_timeSig.m_timeSymbol = TimeSySingleNumber;
+        bar.m_timeSig.m_beats = tabword[1] - '0';
+        bar.m_timeSig.m_beatType = 4;
     }
     else if (tabword.size() == 6 && tabword[2] >= '1' && tabword[2] <= '9' && tabword[3] >= '/' && tabword[4] >= '1' && tabword[4] <= '9')
     {
         // M(3/4)
-        bar.m_timeSymbol = TimeSyNormal;
-        bar.m_beats = tabword[2] - '0';
-        bar.m_beatType = tabword[4] - '0';
+        bar.m_timeSig.m_timeSymbol = TimeSyNormal;
+        bar.m_timeSig.m_beats = tabword[2] - '0';
+        bar.m_timeSig.m_beatType = tabword[4] - '0';
     }
     else
     {

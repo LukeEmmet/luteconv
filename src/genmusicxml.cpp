@@ -7,6 +7,7 @@
 #include <sstream>
 #include <iostream>
 #include <fstream>
+#include <algorithm>
 
 #include "musicxml.h"
 
@@ -21,13 +22,18 @@ void GenMusicXml::Generate(const Options& options, const Piece& piece)
     std::fstream dst;
     dst.open(options.m_dstFilename.c_str(), std::fstream::out | std::fstream::trunc);
     if (!dst.is_open())
-        throw std::runtime_error(std::string("Error: Can't open ") + options.m_dstFilename);
+        throw std::runtime_error("Error: Can't open " + options.m_dstFilename);
     
     Generate(options, piece, dst);
 }
 
 void GenMusicXml::Generate(const Options& options, const Piece& piece, std::ostream& dst)
 {
+    if (options.m_dstTabType == TabGerman)
+    {
+        throw std::runtime_error("Error: MusicXML does not support german tablature");
+    }
+    
     std::time_t tt = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
     struct std::tm * ptm = std::gmtime(&tt);
 
@@ -180,7 +186,7 @@ XMLElement* GenMusicXml::Measure(const Piece& piece, const Bar& bar, int n, bool
     {
         measure->Add(FirstMeasureAttributes(piece, bar, options));
     }
-    else if (bar.m_timeSymbol != TimeSyNone)
+    else if (bar.m_timeSig.m_timeSymbol != TimeSyNone)
     {
         XMLElement* attributes = new XMLElement("attributes");
         AddTimeSignature(attributes, bar);
@@ -190,8 +196,10 @@ XMLElement* GenMusicXml::Measure(const Piece& piece, const Bar& bar, int n, bool
     for (const auto & luteChord : bar.m_chords)
     {
         // TODO Musecore has crotchet == 0 flags
-        const NoteType noteType2 = static_cast<NoteType>(luteChord.m_noteType + 0);
-        const int duration = luteChord.m_dotted ? (3 * Duration(noteType2)) / 2 : Duration(noteType2);
+        NoteType adjusted{static_cast<NoteType>(luteChord.m_noteType + options.m_flags)};
+        adjusted = std::max(NoteTypeLong, adjusted);
+        adjusted = std::min(NoteType256th, adjusted);
+        const int duration = luteChord.m_dotted ? (3 * Duration(adjusted)) / 2 : Duration(adjusted);
 
         if (luteChord.m_notes.empty())
         {
@@ -199,7 +207,7 @@ XMLElement* GenMusicXml::Measure(const Piece& piece, const Bar& bar, int n, bool
             
             note->Add(new XMLElement("rest"));
             note->Add(new XMLElement("duration", duration));
-            note->Add(new XMLElement("type", MusicXml::noteType[luteChord.m_noteType]));
+            note->Add(new XMLElement("type", MusicXml::noteType[adjusted]));
             
             if (luteChord.m_dotted)
                 note->Add(new XMLElement("dot"));
@@ -237,7 +245,7 @@ XMLElement* GenMusicXml::Measure(const Piece& piece, const Bar& bar, int n, bool
                 note->Add(xmlpitch);
                 
                 note->Add(new XMLElement("duration", duration));
-                note->Add(new XMLElement("type", MusicXml::noteType[luteChord.m_noteType]));
+                note->Add(new XMLElement("type", MusicXml::noteType[adjusted]));
 
                 if (luteChord.m_dotted)
                     note->Add(new XMLElement("dot"));
@@ -356,17 +364,17 @@ XMLElement* GenMusicXml::FirstMeasureAttributes(const Piece& piece, const Bar& b
 
 void GenMusicXml::AddTimeSignature(XMLElement* attributes, const Bar& bar)
 {
-    if (bar.m_timeSymbol == TimeSyNone)
+    if (bar.m_timeSig.m_timeSymbol == TimeSyNone)
         return;
     
     XMLElement* time = new XMLElement("time");
     
-    if (bar.m_timeSymbol != TimeSyNormal)
+    if (bar.m_timeSig.m_timeSymbol != TimeSyNormal)
     {
-        time->AddAttrib("symbol", MusicXml::timeSymbol[bar.m_timeSymbol]);
+        time->AddAttrib("symbol", MusicXml::timeSymbol[bar.m_timeSig.m_timeSymbol]);
     }
-    time->Add(new XMLElement("beats", bar.m_beats));
-    time->Add(new XMLElement("beat-type", bar.m_beatType));
+    time->Add(new XMLElement("beats", bar.m_timeSig.m_beats));
+    time->Add(new XMLElement("beat-type", bar.m_timeSig.m_beatType));
     
     attributes->Add(time);
 }

@@ -127,6 +127,13 @@ public:
     std::vector<Note> m_notes;
 };
 
+class TimeSig
+{
+public:
+    TimeSymbol m_timeSymbol{TimeSyNone};
+    int m_beats{0};
+    int m_beatType{0};
+};
 
 class Bar
 {
@@ -135,10 +142,7 @@ public:
     ~Bar() = default;
     
     void Clear();
-
-    TimeSymbol m_timeSymbol{TimeSyNone};
-    int m_beats{0};
-    int m_beatType{0};
+    TimeSig m_timeSig;
     BarStyle m_barStyle{BarStyleRegular};
     Repeat m_repeat{RepNone};
     bool m_fermata{false};

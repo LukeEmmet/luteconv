@@ -23,6 +23,12 @@ Fronimo[2] is a commercial Windows lute tablature editor written by Francesco Tr
 ft3, is a closed, proprietary binary format.  Luke Emmet[3] has reverse engineered the format for his program LuteScribe
 so that some the data can be extracted.  I am grateful for his work on this.
 
+Music Encoding Initiative mei
+-----------------------------
+The Music Encoding Initiative (MEI)[12] is a community-driven effort to define a system for
+encoding musical documents in a machine-readable structure. This is an experimental
+implementation of some proposals from the Tablature Interest Group.
+
 MusicXML musicxml, mxl
 ----------------------
 MusicXML[4] is an music interchange file format and is supported by many music editing programs
@@ -43,11 +49,11 @@ Where there is a large searchable database of lute pieces.  TabCode is well docu
 
 Supported source formats
 ------------------------
-ft3, jtxml, jtz, musicxml, mxl, tab and tc.
+ft3, jtxml, jtz, mei, musicxml, mxl, tab and tc.
 
 Supported destination formats
 -----------------------------
-musicxml, mxl, tab and tc.
+mei, musicxml, mxl, tab and tc.
 
 Supporting proprietary destination formats (jtxml, jtz, ft3) is not possible as this would require
 complete knowledge of their structure and semantics, which is not available.  Whereas they can be used as
@@ -72,30 +78,32 @@ Usage
 -----
     Usage: luteconv [options ...] source-file [destination-file]
 
-    | option                      | function                       |
-    | ------                      | --------                       |
-    | --help                      | Show help                      |
-    | --version                   | Show version                   |
-    | --output <destination-file> | Set destination-file           |
-    | --Srctabtype <tabtype>      | Set source tablature type      |
-    | --Dsttabtype <tabtype>      | Set destination tablature type |
-    | --srcformat <format>        | Set source format              |
-    | --dstformat <format>        | Set destination format         |
-    | --tuning <tuning>           | Set tuning for all courses     |
-    | --7tuning <tuning>          | Set tuning from 7th course     |
-    | --index <index>             | Set section index              |
-    | --Verbose                   | Set verbose output             |
+    | option                         | function                        |
+    | ------                         | --------                        |
+    | -h --help                      | Show help                       |
+    | -v --version                   | Show version                    |
+    | -o --output <destination-file> | Set destination-file            |
+    | -S --Srctabtype <tabtype>      | Set source tablature type       |
+    | -D --Dsttabtype <tabtype>      | Set destination tablature type  |
+    | -s --srcformat <format>        | Set source format               |
+    | -d --dstformat <format>        | Set destination format          |
+    | -t --tuning <tuning>           | Set tuning for all courses      |
+    | -7 --7tuning <tuning>          | Set tuning from 7th course      |
+    | -i --index <index>             | Set section index               |
+    | -f --flags <num>               | Add flags to destination rhythm |
+    | -V --Verbose                   | Set verbose output              |
+    | -w --wrap                      | Set the stave wrap threshold    |
 
 Options may use long or short syntax: --7tuning=D2 or -7D2
 
 The destination-file can be specified either using the --output option or as the 2nd positional parameter,
 this conforms to the GNU Standards for Command Line Interfaces[9].
  
-    format = "ft3" | "jtxml" | "jtz" | "musicxml" | "mxl" | "tab" | "tc"
+    format = "ft3" | "jtxml" | "jtz" | "mei" | "musicxml" | "mxl" | "tab" | "tc"
   
 if a file format is not specified then the filetype is used.
          
-    tabtype = "french" | "italian" | "spanish"
+    tabtype = "french" | "german" | "italian" | "spanish"
 
 The source tablature type is usually deduced from the source-file.  However, for tab
 files it is sometimes necessary to distinguish between italian and spanish tablatures.
@@ -115,6 +123,15 @@ Option --7tuning, if given, will then modify the tuning of the 7th, 8th, ... cou
          
 Where the source format allows more than one piece per file the --index option selects the
 desired piece, counting from 0.  Default 0.
+
+Some lute software encodes rhythm as the number of lute tablature flags, others
+encode the mensural note value (whole, half, quarter etc) unfortunately there is
+no fixed mapping between the two.  The --flags option adds (or subtracts) flags
+from the destination rhythm to adjust this mapping.  Default 0.
+
+Option --wrap, default 25.  Some formats require explicit stave line endings.
+Luteconv uses a herustic: count chords, when the threshold is reached end the
+stave at the end of the current bar.
 
 Examples
 --------
@@ -138,7 +155,7 @@ Convert 2nd piece from a Fandango collection to tab (index counts from 0)
 Download pre-built binary
 -------------------------
 
-Version 1.0.0
+Version: 1.0.0, tag: release-1.0.0
 
 * [luteconv-1.0.0-1.x86_64.rpm](http://www.overell.co.uk/luteconv/luteconv-1.0.0-1.x86_64.rpm) SHA-256:336be4f7387ec731f6c9d04baf9496eccdbebd07b2e206b350a053f30ed5b21d
 * [luteconv-1.0.0-1.x86_64.deb](http://www.overell.co.uk/luteconv/luteconv-1.0.0-1.x86_64.deb) SHA-256:032f5745bf35f25b3ffd7b8b74de2efbcd196360915b49e47b51dc1a4359ed78
@@ -160,6 +177,10 @@ suitable workspace directory:
     make
     make test
     make package
+
+The master branch is use for development.  Releases are tagged release-x.y.z
+
+luteconv has build dependencies: zlib-devel, pugixml-devel, libzip-devel and gtest.
 
 The executable will be in build/bin.  The .rpm, .deb and .tar.gz packages will be in the build directory.
 
@@ -189,4 +210,5 @@ References
 9.  [GNU](https://www.gnu.org/prep/standards/html_node/Command_002dLine-Interfaces.html)
 10. [Scientific Pitch Notation](https://en.wikipedia.org/wiki/Scientific_pitch_notation)
 11. [MuseScore](https://musescore.org/en)
+12. [MEI](https://music-encoding.org/)
 

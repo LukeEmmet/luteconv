@@ -104,6 +104,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\genmei.cpp" />
+    <ClCompile Include="..\src\mei.cpp" />
+    <ClCompile Include="..\src\parsermei.cpp" />
     <ClCompile Include="external\pugixml\src\pugixml.cpp" />
     <ClCompile Include="..\src\converter.cpp" />
     <ClCompile Include="..\src\genmusicxml.cpp" />
@@ -127,6 +130,9 @@
     <ClCompile Include="..\src\xmlwriter.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\src\genmei.h" />
+    <ClInclude Include="..\src\mei.h" />
+    <ClInclude Include="..\src\parsermei.h" />
     <ClInclude Include="external\libzip\include\zip.h" />
     <ClInclude Include="external\libzip\include\zipconf.h" />
     <ClInclude Include="external\libzip\include\zipint.h" />
